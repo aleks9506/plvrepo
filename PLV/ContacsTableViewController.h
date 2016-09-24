@@ -1,5 +1,5 @@
 //
-//  TourismTableViewController.h
+//  ContacsTableViewController.h
 //  PLV
 //
 //  Created by Carlos Burgueño on 23/09/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TourismTableViewController : UITableViewController
+@interface ContacsTableViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 
 @end

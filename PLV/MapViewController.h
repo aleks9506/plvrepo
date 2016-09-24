@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MapViewController.h
 //  PLV
 //
 //  Created by Carlos Burgueño on 23/09/16.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MapViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
 
 @end
-

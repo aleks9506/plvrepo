@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C05FDB991D95E9270090054E /* ContacsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05FDB981D95E9270090054E /* ContacsTableViewController.m */; };
+		C05FDB9C1D9607850090054E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05FDB9B1D9607850090054E /* MapViewController.m */; };
+		C05FDB9E1D96087C0090054E /* Mapa-Evento.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */; };
 		C0A9D0EA1D9564210015B432 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D0E91D9564210015B432 /* main.m */; };
 		C0A9D0ED1D9564210015B432 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D0EC1D9564210015B432 /* AppDelegate.m */; };
-		C0A9D0F01D9564210015B432 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D0EF1D9564210015B432 /* ViewController.m */; };
 		C0A9D0F31D9564210015B432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A9D0F11D9564210015B432 /* Main.storyboard */; };
 		C0A9D0F61D9564210015B432 /* PLV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D0F41D9564210015B432 /* PLV.xcdatamodeld */; };
 		C0A9D0F81D9564210015B432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A9D0F71D9564210015B432 /* Assets.xcassets */; };
@@ -53,12 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C05FDB971D95E9270090054E /* ContacsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContacsTableViewController.h; sourceTree = "<group>"; };
+		C05FDB981D95E9270090054E /* ContacsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContacsTableViewController.m; sourceTree = "<group>"; };
+		C05FDB9A1D9607850090054E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		C05FDB9B1D9607850090054E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mapa-Evento.jpeg"; sourceTree = "<group>"; };
 		C0A9D0E51D9564210015B432 /* PLV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A9D0E91D9564210015B432 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C0A9D0EB1D9564210015B432 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C0A9D0EC1D9564210015B432 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C0A9D0EE1D9564210015B432 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C0A9D0EF1D9564210015B432 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C0A9D0F21D9564210015B432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0A9D0F51D9564210015B432 /* PLV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PLV.xcdatamodel; sourceTree = "<group>"; };
 		C0A9D0F71D9564210015B432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,8 +149,6 @@
 				C0A9D11E1D9564500015B432 /* Assets */,
 				C0A9D0EB1D9564210015B432 /* AppDelegate.h */,
 				C0A9D0EC1D9564210015B432 /* AppDelegate.m */,
-				C0A9D0EE1D9564210015B432 /* ViewController.h */,
-				C0A9D0EF1D9564210015B432 /* ViewController.m */,
 				C0A9D0F11D9564210015B432 /* Main.storyboard */,
 				C0A9D0F71D9564210015B432 /* Assets.xcassets */,
 				C0A9D0F91D9564210015B432 /* LaunchScreen.storyboard */,
@@ -156,6 +159,10 @@
 				C0A9D13E1D9571560015B432 /* PLVWallTableViewController.m */,
 				C0A9D1421D9586CF0015B432 /* TourismTableViewController.h */,
 				C0A9D1431D9586CF0015B432 /* TourismTableViewController.m */,
+				C05FDB971D95E9270090054E /* ContacsTableViewController.h */,
+				C05FDB981D95E9270090054E /* ContacsTableViewController.m */,
+				C05FDB9A1D9607850090054E /* MapViewController.h */,
+				C05FDB9B1D9607850090054E /* MapViewController.m */,
 			);
 			path = PLV;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 		C0A9D11E1D9564500015B432 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */,
 				C0A9D1401D957FC80015B432 /* loop2.png */,
 				C0A9D1271D9569C70015B432 /* address-book.png */,
 				C0A9D1281D9569C70015B432 /* book.png */,
@@ -332,6 +340,7 @@
 				C0A9D1411D957FC80015B432 /* loop2.png in Resources */,
 				C0A9D1391D9569C70015B432 /* map2.png in Resources */,
 				C0A9D0F81D9564210015B432 /* Assets.xcassets in Resources */,
+				C05FDB9E1D96087C0090054E /* Mapa-Evento.jpeg in Resources */,
 				C0A9D1241D9567F70015B432 /* user.png in Resources */,
 				C0A9D1261D9568640015B432 /* profile.png in Resources */,
 				C0A9D0F31D9564210015B432 /* Main.storyboard in Resources */,
@@ -364,9 +373,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0A9D0F01D9564210015B432 /* ViewController.m in Sources */,
+				C05FDB991D95E9270090054E /* ContacsTableViewController.m in Sources */,
 				C0A9D0ED1D9564210015B432 /* AppDelegate.m in Sources */,
 				C0A9D13F1D9571560015B432 /* PLVWallTableViewController.m in Sources */,
+				C05FDB9C1D9607850090054E /* MapViewController.m in Sources */,
 				C0A9D1221D9564DE0015B432 /* SWRevealViewController.m in Sources */,
 				C0A9D0F61D9564210015B432 /* PLV.xcdatamodeld in Sources */,
 				C0A9D1441D9586CF0015B432 /* TourismTableViewController.m in Sources */,
@@ -602,6 +612,7 @@
 				C0A9D1171D9564220015B432 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0A9D1181D9564220015B432 /* Build configuration list for PBXNativeTarget "PLVTests" */ = {
 			isa = XCConfigurationList;
@@ -610,6 +621,7 @@
 				C0A9D11A1D9564220015B432 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0A9D11B1D9564220015B432 /* Build configuration list for PBXNativeTarget "PLVUITests" */ = {
 			isa = XCConfigurationList;
@@ -618,6 +630,7 @@
 				C0A9D11D1D9564220015B432 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
