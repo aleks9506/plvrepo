@@ -35,6 +35,7 @@
 		C0A9D13F1D9571560015B432 /* PLVWallTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D13E1D9571560015B432 /* PLVWallTableViewController.m */; };
 		C0A9D1411D957FC80015B432 /* loop2.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A9D1401D957FC80015B432 /* loop2.png */; };
 		C0A9D1441D9586CF0015B432 /* TourismTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D1431D9586CF0015B432 /* TourismTableViewController.m */; };
+		C0FE98791D96E3FA00E7FD5A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FE98781D96E3FA00E7FD5A /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		C0A9D1401D957FC80015B432 /* loop2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loop2.png; sourceTree = "<group>"; };
 		C0A9D1421D9586CF0015B432 /* TourismTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismTableViewController.h; sourceTree = "<group>"; };
 		C0A9D1431D9586CF0015B432 /* TourismTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismTableViewController.m; sourceTree = "<group>"; };
+		C0FE98781D96E3FA00E7FD5A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 		C0A9D11E1D9564500015B432 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				C0FE98781D96E3FA00E7FD5A /* logo.png */,
 				C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */,
 				C0A9D1401D957FC80015B432 /* loop2.png */,
 				C0A9D1271D9569C70015B432 /* address-book.png */,
@@ -343,6 +346,7 @@
 				C05FDB9E1D96087C0090054E /* Mapa-Evento.jpeg in Resources */,
 				C0A9D1241D9567F70015B432 /* user.png in Resources */,
 				C0A9D1261D9568640015B432 /* profile.png in Resources */,
+				C0FE98791D96E3FA00E7FD5A /* logo.png in Resources */,
 				C0A9D0F31D9564210015B432 /* Main.storyboard in Resources */,
 				C0A9D1321D9569C70015B432 /* address-book.png in Resources */,
 				C0A9D1351D9569C70015B432 /* compass2.png in Resources */,
