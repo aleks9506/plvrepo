@@ -1,21 +1,20 @@
 //
-//  ContacsTableViewController.m
+//  AgendaTableViewController.m
 //  PLV
 //
-//  Created by Carlos Burgueño on 23/09/16.
+//  Created by Carlos Burgueño on 27/09/16.
 //  Copyright © 2016 Carlos Burgueño. All rights reserved.
 //
 
-#import "ContacsTableViewController.h"
-#import "SWRevealViewController.h"
+#import "AgendaTableViewController.h"
 
-@interface ContacsTableViewController ()
+@interface AgendaTableViewController ()
 
 @end
 
-NSMutableArray *jsonArray;
+NSMutableArray *eventsArray;
 
-@implementation ContacsTableViewController
+@implementation AgendaTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,18 +24,6 @@ NSMutableArray *jsonArray;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    _menuButton.target = self.revealViewController;
-    _menuButton.action = @selector(revealToggle:);
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    [self showActivityImage];
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [self geDataFromUri];
-    [self.tableView reloadData];
-    [[self.view viewWithTag:12] stopAnimating];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,47 +31,27 @@ NSMutableArray *jsonArray;
     // Dispose of any resources that can be recreated.
 }
 
--(void)showActivityImage{
-    
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    spinner.center = CGPointMake(160, 240);
-    spinner.tag = 12;
-    [self.view addSubview:spinner];
-    [spinner startAnimating];
-}
-
--(void)geDataFromUri{
-    NSError *error;
-    NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/asistentes"];
-    NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
-    jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [jsonArray count];
+
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AgendCell" forIndexPath:indexPath];
-    
-    if ([jsonArray count] > 0) {
-        NSDictionary *obj = [jsonArray objectAtIndex:indexPath.row];
-        NSString *str = [NSString stringWithFormat: @"%@ %@", [obj objectForKey:@"nombres"], [obj objectForKey:@"apellidos"]];
-        cell.textLabel.text=str;
-        cell.imageView.image=[UIImage imageNamed:@"user.png"];
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
+    
     return cell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.

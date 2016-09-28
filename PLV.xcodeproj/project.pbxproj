@@ -10,6 +10,9 @@
 		C05FDB991D95E9270090054E /* ContacsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05FDB981D95E9270090054E /* ContacsTableViewController.m */; };
 		C05FDB9C1D9607850090054E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05FDB9B1D9607850090054E /* MapViewController.m */; };
 		C05FDB9E1D96087C0090054E /* Mapa-Evento.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */; };
+		C078F4951D9B307600EFA704 /* SpeakersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C078F4941D9B307600EFA704 /* SpeakersTableViewController.m */; };
+		C078F4991D9B421400EFA704 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C078F4981D9B421400EFA704 /* ActivityTableViewCell.m */; };
+		C078F49C1D9B43A800EFA704 /* AgendaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C078F49B1D9B43A800EFA704 /* AgendaTableViewController.m */; };
 		C0A9D0EA1D9564210015B432 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D0E91D9564210015B432 /* main.m */; };
 		C0A9D0ED1D9564210015B432 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D0EC1D9564210015B432 /* AppDelegate.m */; };
 		C0A9D0F31D9564210015B432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A9D0F11D9564210015B432 /* Main.storyboard */; };
@@ -35,7 +38,7 @@
 		C0A9D13F1D9571560015B432 /* PLVWallTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D13E1D9571560015B432 /* PLVWallTableViewController.m */; };
 		C0A9D1411D957FC80015B432 /* loop2.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A9D1401D957FC80015B432 /* loop2.png */; };
 		C0A9D1441D9586CF0015B432 /* TourismTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D1431D9586CF0015B432 /* TourismTableViewController.m */; };
-		C0FE98791D96E3FA00E7FD5A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C0FE98781D96E3FA00E7FD5A /* logo.png */; };
+		C0FE98791D96E3FA00E7FD5A /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C0FE98781D96E3FA00E7FD5A /* logo.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,12 @@
 		C05FDB9A1D9607850090054E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		C05FDB9B1D9607850090054E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mapa-Evento.jpeg"; sourceTree = "<group>"; };
+		C078F4931D9B307600EFA704 /* SpeakersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakersTableViewController.h; sourceTree = "<group>"; };
+		C078F4941D9B307600EFA704 /* SpeakersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakersTableViewController.m; sourceTree = "<group>"; };
+		C078F4971D9B421400EFA704 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityTableViewCell.h; path = CellsTypes/ActivityTableViewCell.h; sourceTree = "<group>"; };
+		C078F4981D9B421400EFA704 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityTableViewCell.m; path = CellsTypes/ActivityTableViewCell.m; sourceTree = "<group>"; };
+		C078F49A1D9B43A800EFA704 /* AgendaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaTableViewController.h; sourceTree = "<group>"; };
+		C078F49B1D9B43A800EFA704 /* AgendaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgendaTableViewController.m; sourceTree = "<group>"; };
 		C0A9D0E51D9564210015B432 /* PLV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PLV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A9D0E91D9564210015B432 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C0A9D0EB1D9564210015B432 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,7 +105,7 @@
 		C0A9D1401D957FC80015B432 /* loop2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loop2.png; sourceTree = "<group>"; };
 		C0A9D1421D9586CF0015B432 /* TourismTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismTableViewController.h; sourceTree = "<group>"; };
 		C0A9D1431D9586CF0015B432 /* TourismTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismTableViewController.m; sourceTree = "<group>"; };
-		C0FE98781D96E3FA00E7FD5A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		C0FE98781D96E3FA00E7FD5A /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +133,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C078F4961D9B41BD00EFA704 /* CellsTypes */ = {
+			isa = PBXGroup;
+			children = (
+				C078F4971D9B421400EFA704 /* ActivityTableViewCell.h */,
+				C078F4981D9B421400EFA704 /* ActivityTableViewCell.m */,
+			);
+			name = CellsTypes;
+			sourceTree = "<group>";
+		};
 		C0A9D0DC1D9564210015B432 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +165,7 @@
 		C0A9D0E71D9564210015B432 /* PLV */ = {
 			isa = PBXGroup;
 			children = (
+				C078F4961D9B41BD00EFA704 /* CellsTypes */,
 				C0A9D11F1D9564CA0015B432 /* SWRevealController */,
 				C0A9D11E1D9564500015B432 /* Assets */,
 				C0A9D0EB1D9564210015B432 /* AppDelegate.h */,
@@ -165,6 +184,10 @@
 				C05FDB981D95E9270090054E /* ContacsTableViewController.m */,
 				C05FDB9A1D9607850090054E /* MapViewController.h */,
 				C05FDB9B1D9607850090054E /* MapViewController.m */,
+				C078F4931D9B307600EFA704 /* SpeakersTableViewController.h */,
+				C078F4941D9B307600EFA704 /* SpeakersTableViewController.m */,
+				C078F49A1D9B43A800EFA704 /* AgendaTableViewController.h */,
+				C078F49B1D9B43A800EFA704 /* AgendaTableViewController.m */,
 			);
 			path = PLV;
 			sourceTree = "<group>";
@@ -198,7 +221,7 @@
 		C0A9D11E1D9564500015B432 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				C0FE98781D96E3FA00E7FD5A /* logo.png */,
+				C0FE98781D96E3FA00E7FD5A /* logo.jpeg */,
 				C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */,
 				C0A9D1401D957FC80015B432 /* loop2.png */,
 				C0A9D1271D9569C70015B432 /* address-book.png */,
@@ -346,7 +369,7 @@
 				C05FDB9E1D96087C0090054E /* Mapa-Evento.jpeg in Resources */,
 				C0A9D1241D9567F70015B432 /* user.png in Resources */,
 				C0A9D1261D9568640015B432 /* profile.png in Resources */,
-				C0FE98791D96E3FA00E7FD5A /* logo.png in Resources */,
+				C0FE98791D96E3FA00E7FD5A /* logo.jpeg in Resources */,
 				C0A9D0F31D9564210015B432 /* Main.storyboard in Resources */,
 				C0A9D1321D9569C70015B432 /* address-book.png in Resources */,
 				C0A9D1351D9569C70015B432 /* compass2.png in Resources */,
@@ -380,7 +403,10 @@
 				C05FDB991D95E9270090054E /* ContacsTableViewController.m in Sources */,
 				C0A9D0ED1D9564210015B432 /* AppDelegate.m in Sources */,
 				C0A9D13F1D9571560015B432 /* PLVWallTableViewController.m in Sources */,
+				C078F4951D9B307600EFA704 /* SpeakersTableViewController.m in Sources */,
+				C078F4991D9B421400EFA704 /* ActivityTableViewCell.m in Sources */,
 				C05FDB9C1D9607850090054E /* MapViewController.m in Sources */,
+				C078F49C1D9B43A800EFA704 /* AgendaTableViewController.m in Sources */,
 				C0A9D1221D9564DE0015B432 /* SWRevealViewController.m in Sources */,
 				C0A9D0F61D9564210015B432 /* PLV.xcdatamodeld in Sources */,
 				C0A9D1441D9586CF0015B432 /* TourismTableViewController.m in Sources */,

@@ -1,21 +1,20 @@
 //
-//  ContacsTableViewController.m
+//  SpeakersTableViewController.m
 //  PLV
 //
-//  Created by Carlos Burgueño on 23/09/16.
+//  Created by Carlos Burgueño on 27/09/16.
 //  Copyright © 2016 Carlos Burgueño. All rights reserved.
 //
 
-#import "ContacsTableViewController.h"
+#import "SpeakersTableViewController.h"
 #import "SWRevealViewController.h"
 
-@interface ContacsTableViewController ()
+@interface SpeakersTableViewController ()
 
 @end
+NSMutableArray *speakersArray;
 
-NSMutableArray *jsonArray;
-
-@implementation ContacsTableViewController
+@implementation SpeakersTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,10 +25,11 @@ NSMutableArray *jsonArray;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    
+    //Boton de menu
     _menuButton.target = self.revealViewController;
-    _menuButton.action = @selector(revealToggle:);
+    _menuButton.action =@selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    [self showActivityImage];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -55,33 +55,36 @@ NSMutableArray *jsonArray;
 
 -(void)geDataFromUri{
     NSError *error;
-    NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/asistentes"];
+    NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/speakers"];
     NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
-    jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    speakersArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 }
+
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [jsonArray count];
+
+    return [speakersArray count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AgendCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellSpeaker" forIndexPath:indexPath];
     
-    if ([jsonArray count] > 0) {
-        NSDictionary *obj = [jsonArray objectAtIndex:indexPath.row];
-        NSString *str = [NSString stringWithFormat: @"%@ %@", [obj objectForKey:@"nombres"], [obj objectForKey:@"apellidos"]];
+    // Configure the cell...
+    if ([speakersArray count] > 0) {
+        NSDictionary *obj = [speakersArray objectAtIndex:indexPath.row];
+        NSString *str = [obj objectForKey:@"conferencista"];
         cell.textLabel.text=str;
         cell.imageView.image=[UIImage imageNamed:@"user.png"];
     }
     
-    // Configure the cell...
     return cell;
 }
 
