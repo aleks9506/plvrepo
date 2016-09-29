@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0708F5481D9D628A005DAD01 /* ForoTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0708F5471D9D628A005DAD01 /* ForoTestTableViewController.m */; };
+		0708F54C1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0708F54B1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m */; };
+		077D196C1D9D5A9F009879AD /* radio-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D196A1D9D5A9F009879AD /* radio-off.png */; };
+		077D196D1D9D5A9F009879AD /* radio-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D196B1D9D5A9F009879AD /* radio-on.png */; };
 		C05FDB991D95E9270090054E /* ContacsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05FDB981D95E9270090054E /* ContacsTableViewController.m */; };
 		C05FDB9C1D9607850090054E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05FDB9B1D9607850090054E /* MapViewController.m */; };
 		C05FDB9E1D96087C0090054E /* Mapa-Evento.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */; };
@@ -59,6 +63,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0708F5461D9D628A005DAD01 /* ForoTestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForoTestTableViewController.h; sourceTree = "<group>"; };
+		0708F5471D9D628A005DAD01 /* ForoTestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForoTestTableViewController.m; sourceTree = "<group>"; };
+		0708F54A1D9D747F005DAD01 /* ConfirmidadTestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmidadTestTableViewController.h; sourceTree = "<group>"; };
+		0708F54B1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmidadTestTableViewController.m; sourceTree = "<group>"; };
+		077D196A1D9D5A9F009879AD /* radio-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-off.png"; sourceTree = "<group>"; };
+		077D196B1D9D5A9F009879AD /* radio-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-on.png"; sourceTree = "<group>"; };
 		C05FDB971D95E9270090054E /* ContacsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContacsTableViewController.h; sourceTree = "<group>"; };
 		C05FDB981D95E9270090054E /* ContacsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContacsTableViewController.m; sourceTree = "<group>"; };
 		C05FDB9A1D9607850090054E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -188,6 +198,10 @@
 				C078F4941D9B307600EFA704 /* SpeakersTableViewController.m */,
 				C078F49A1D9B43A800EFA704 /* AgendaTableViewController.h */,
 				C078F49B1D9B43A800EFA704 /* AgendaTableViewController.m */,
+				0708F5461D9D628A005DAD01 /* ForoTestTableViewController.h */,
+				0708F5471D9D628A005DAD01 /* ForoTestTableViewController.m */,
+				0708F54A1D9D747F005DAD01 /* ConfirmidadTestTableViewController.h */,
+				0708F54B1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m */,
 			);
 			path = PLV;
 			sourceTree = "<group>";
@@ -221,6 +235,8 @@
 		C0A9D11E1D9564500015B432 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				077D196A1D9D5A9F009879AD /* radio-off.png */,
+				077D196B1D9D5A9F009879AD /* radio-on.png */,
 				C0FE98781D96E3FA00E7FD5A /* logo.jpeg */,
 				C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */,
 				C0A9D1401D957FC80015B432 /* loop2.png */,
@@ -359,6 +375,7 @@
 			files = (
 				C0A9D13B1D9569C70015B432 /* newspaper.png in Resources */,
 				C0A9D0FB1D9564210015B432 /* LaunchScreen.storyboard in Resources */,
+				077D196D1D9D5A9F009879AD /* radio-on.png in Resources */,
 				C0A9D1361D9569C70015B432 /* exit.png in Resources */,
 				C0A9D1381D9569C70015B432 /* list2.png in Resources */,
 				C0A9D1341D9569C70015B432 /* checkmark.png in Resources */,
@@ -372,6 +389,7 @@
 				C0FE98791D96E3FA00E7FD5A /* logo.jpeg in Resources */,
 				C0A9D0F31D9564210015B432 /* Main.storyboard in Resources */,
 				C0A9D1321D9569C70015B432 /* address-book.png in Resources */,
+				077D196C1D9D5A9F009879AD /* radio-off.png in Resources */,
 				C0A9D1351D9569C70015B432 /* compass2.png in Resources */,
 				C0A9D1371D9569C70015B432 /* list.png in Resources */,
 				C0A9D13C1D9569C70015B432 /* users.png in Resources */,
@@ -403,8 +421,10 @@
 				C05FDB991D95E9270090054E /* ContacsTableViewController.m in Sources */,
 				C0A9D0ED1D9564210015B432 /* AppDelegate.m in Sources */,
 				C0A9D13F1D9571560015B432 /* PLVWallTableViewController.m in Sources */,
+				0708F54C1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m in Sources */,
 				C078F4951D9B307600EFA704 /* SpeakersTableViewController.m in Sources */,
 				C078F4991D9B421400EFA704 /* ActivityTableViewCell.m in Sources */,
+				0708F5481D9D628A005DAD01 /* ForoTestTableViewController.m in Sources */,
 				C05FDB9C1D9607850090054E /* MapViewController.m in Sources */,
 				C078F49C1D9B43A800EFA704 /* AgendaTableViewController.m in Sources */,
 				C0A9D1221D9564DE0015B432 /* SWRevealViewController.m in Sources */,
