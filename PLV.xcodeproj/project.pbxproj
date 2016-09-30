@@ -11,6 +11,7 @@
 		0708F54C1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0708F54B1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m */; };
 		077D196C1D9D5A9F009879AD /* radio-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D196A1D9D5A9F009879AD /* radio-off.png */; };
 		077D196D1D9D5A9F009879AD /* radio-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D196B1D9D5A9F009879AD /* radio-on.png */; };
+		079C1CBA1D9EAAC20090B9AC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 079C1CB91D9EAAC20090B9AC /* background.jpg */; };
 		C05FDB991D95E9270090054E /* ContacsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05FDB981D95E9270090054E /* ContacsTableViewController.m */; };
 		C05FDB9C1D9607850090054E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05FDB9B1D9607850090054E /* MapViewController.m */; };
 		C05FDB9E1D96087C0090054E /* Mapa-Evento.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */; };
@@ -69,6 +70,7 @@
 		0708F54B1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmidadTestTableViewController.m; sourceTree = "<group>"; };
 		077D196A1D9D5A9F009879AD /* radio-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-off.png"; sourceTree = "<group>"; };
 		077D196B1D9D5A9F009879AD /* radio-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-on.png"; sourceTree = "<group>"; };
+		079C1CB91D9EAAC20090B9AC /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		C05FDB971D95E9270090054E /* ContacsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContacsTableViewController.h; sourceTree = "<group>"; };
 		C05FDB981D95E9270090054E /* ContacsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContacsTableViewController.m; sourceTree = "<group>"; };
 		C05FDB9A1D9607850090054E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		C0A9D11E1D9564500015B432 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				079C1CB91D9EAAC20090B9AC /* background.jpg */,
 				077D196A1D9D5A9F009879AD /* radio-off.png */,
 				077D196B1D9D5A9F009879AD /* radio-on.png */,
 				C0FE98781D96E3FA00E7FD5A /* logo.jpeg */,
@@ -382,6 +385,7 @@
 				C0A9D13A1D9569C70015B432 /* menu.png in Resources */,
 				C0A9D1411D957FC80015B432 /* loop2.png in Resources */,
 				C0A9D1391D9569C70015B432 /* map2.png in Resources */,
+				079C1CBA1D9EAAC20090B9AC /* background.jpg in Resources */,
 				C0A9D0F81D9564210015B432 /* Assets.xcassets in Resources */,
 				C05FDB9E1D96087C0090054E /* Mapa-Evento.jpeg in Resources */,
 				C0A9D1241D9567F70015B432 /* user.png in Resources */,

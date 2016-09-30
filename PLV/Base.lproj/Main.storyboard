@@ -134,8 +134,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Linea del Tiempo" id="3SY-n2-Oy1">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" style="plain" id="PGn-k0-doN"/>
-                        <barButtonItem key="rightBarButtonItem" image="loop2.png" id="nMP-Jo-Xt3"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" style="plain" id="PGn-k0-doN">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="loop2.png" id="nMP-Jo-Xt3">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="PGn-k0-doN" id="C6O-50-0b9"/>
@@ -261,7 +265,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Opciones Turisticas" id="soE-9a-how">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="jBN-Jm-g4m"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="jBN-Jm-g4m">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="jBN-Jm-g4m" id="HWh-DZ-n8p"/>
@@ -289,6 +295,10 @@
                                             <frame key="frameInset" width="375" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Jvk-NY-g2Y">
+                                                    <frame key="frameInset" width="375" height="166"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="77k-oO-687">
                                                     <frame key="frameInset" minX="8" minY="49" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -542,7 +552,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ap-n9-Bqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2218" y="1096"/>
+            <point key="canvasLocation" x="-2218.4000000000001" y="1095.2023988005999"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="61K-2G-kD7">
@@ -586,7 +596,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Conferencistas" id="zqe-69-lSM">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="8kh-8H-MmW"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="8kh-8H-MmW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="8kh-8H-MmW" id="8H0-L9-BAY"/>
@@ -638,7 +650,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Contactos" id="bnW-fC-2ez">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="FYm-N1-QRQ"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="FYm-N1-QRQ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="FYm-N1-QRQ" id="XZw-2j-L90"/>
@@ -646,7 +660,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVm-Zh-QL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396" y="798"/>
+            <point key="canvasLocation" x="1396" y="797"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HgH-cA-Jbd">
@@ -773,7 +787,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mapa" id="Bem-Z0-GEf">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="pXl-FR-X6F"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="pXl-FR-X6F">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="pXl-FR-X6F" id="ESi-Bt-FQq"/>
@@ -781,7 +797,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfB-gD-dfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396" y="2293"/>
+            <point key="canvasLocation" x="1396" y="2266"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eYc-Sp-gka">
@@ -917,7 +933,7 @@
                                         <rect key="frame" x="0.0" y="64" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zmn-no-SBs" id="emh-x3-dq2">
-                                            <frame key="frameInset" width="375" height="129"/>
+                                            <frame key="frameInset" width="375" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Por favor ayúdenos llenando estas preguntas para saber que le parecío el foro de financiamiento verde." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EpT-J2-gwZ">
@@ -934,7 +950,7 @@
                                         <rect key="frame" x="0.0" y="194" width="375" height="127"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JXa-b9-Kfm" id="bYl-1d-f96">
-                                            <frame key="frameInset" width="375" height="126"/>
+                                            <frame key="frameInset" width="375" height="127"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.Como le pareció el foro?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dja-1Z-gZp">
@@ -999,7 +1015,7 @@
                                         <rect key="frame" x="0.0" y="321" width="375" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ULl-A3-MWC" id="RXa-D4-Jmf">
-                                            <frame key="frameInset" width="375" height="151"/>
+                                            <frame key="frameInset" width="375" height="152"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2.Como le parecieron los temas que se trataron en el foro?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tck-q1-tqS">
@@ -1064,7 +1080,7 @@
                                         <rect key="frame" x="0.0" y="473" width="375" height="127"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UKK-s6-4wJ" id="ayB-he-91w">
-                                            <frame key="frameInset" width="375" height="126"/>
+                                            <frame key="frameInset" width="375" height="127"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3.Como le pareció la organización del foro?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omk-TB-KTg">
@@ -1129,7 +1145,7 @@
                                         <rect key="frame" x="0.0" y="600" width="375" height="127"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LAy-pQ-eAF" id="bHt-d1-Zx5">
-                                            <frame key="frameInset" width="375" height="126"/>
+                                            <frame key="frameInset" width="375" height="127"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4.Cumplió el congreso sus expectativas?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaQ-ak-IBU">
@@ -1194,7 +1210,7 @@
                                         <rect key="frame" x="0.0" y="727" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Pt-GO-kug" id="q86-Ou-0V1">
-                                            <frame key="frameInset" width="375" height="105"/>
+                                            <frame key="frameInset" width="375" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5.Cual cree que fue el mejor tema a tratar en el foro?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYi-ep-XnU">
@@ -1218,7 +1234,7 @@
                                         <rect key="frame" x="0.0" y="833" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gOZ-NT-P2S" id="eGM-hM-iSi">
-                                            <frame key="frameInset" width="375" height="105"/>
+                                            <frame key="frameInset" width="375" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6.Para usted quién fue el mejor conferencista del Foro?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsE-pL-VX6">
@@ -1242,7 +1258,7 @@
                                         <rect key="frame" x="0.0" y="939" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nzg-CF-BZu" id="Y01-eH-wJb">
-                                            <frame key="frameInset" width="375" height="105"/>
+                                            <frame key="frameInset" width="375" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7.Qué panel(es) le parece que debería de tratarse con mayor" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vG-hI-oTW">
@@ -1266,7 +1282,7 @@
                                         <rect key="frame" x="0.0" y="1045" width="375" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VR3-sy-Frx" id="jEI-YH-tVb">
-                                            <frame key="frameInset" width="375" height="105"/>
+                                            <frame key="frameInset" width="375" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8-.Por cuál medio se enteró del evento?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppq-BN-EWL">
@@ -1295,7 +1311,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Encuesta Foro" id="eqs-YQ-l1S">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="329-ZR-Mvl"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="329-ZR-Mvl">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="329-ZR-Mvl" id="a1k-wZ-bp0"/>
@@ -1303,7 +1321,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wU-Hu-ghz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396" y="3033.7331334332835"/>
+            <point key="canvasLocation" x="1396" y="3034"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pTj-4q-hBe">
@@ -1338,7 +1356,7 @@
                                         <rect key="frame" x="0.0" y="64" width="375" height="138"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lbV-ui-4TT" id="h47-01-Q1E">
-                                            <frame key="frameInset" width="375" height="137"/>
+                                            <frame key="frameInset" width="375" height="138"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSn-LD-0tc">
@@ -1356,7 +1374,7 @@
                                         <rect key="frame" x="0.0" y="202" width="375" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aAe-et-pdx" id="H6G-jr-wlY">
-                                            <frame key="frameInset" width="375" height="174"/>
+                                            <frame key="frameInset" width="375" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.¿Recomendaría a otra persona asistir a otro encuentro con  esta temática luego de esta experiencia?" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="we4-hj-4kt">
@@ -1404,7 +1422,7 @@
                                         <rect key="frame" x="0.0" y="377" width="375" height="175"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cc5-ew-4qy" id="UHu-mm-Iwh">
-                                            <frame key="frameInset" width="375" height="174"/>
+                                            <frame key="frameInset" width="375" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2.¿Considera que el evento cumplir con sus expectativas?" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4e-G9-iDN">
@@ -1452,7 +1470,7 @@
                                         <rect key="frame" x="0.0" y="552" width="375" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zAc-ua-QFy" id="nXq-go-DhM">
-                                            <frame key="frameInset" width="375" height="72"/>
+                                            <frame key="frameInset" width="375" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ml-ZU-Td0">
@@ -1470,7 +1488,7 @@
                                         <rect key="frame" x="0.0" y="625" width="375" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A9F-hX-cts" id="oiM-yG-Hq3">
-                                            <frame key="frameInset" width="375" height="78"/>
+                                            <frame key="frameInset" width="375" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3.1. Organización general del evento" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeZ-v4-M7r">
@@ -1547,7 +1565,7 @@
                                         <rect key="frame" x="0.0" y="704" width="375" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aLg-4e-9Ov" id="wZ7-yD-ZFF">
-                                            <frame key="frameInset" width="375" height="78"/>
+                                            <frame key="frameInset" width="375" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3.2. Calidad y contenido de los expositores" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQN-Wm-8SD">
@@ -1624,7 +1642,7 @@
                                         <rect key="frame" x="0.0" y="783" width="375" height="79"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1m0-Xq-9WY" id="SH2-cc-AwY">
-                                            <frame key="frameInset" width="375" height="78"/>
+                                            <frame key="frameInset" width="375" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3.3 Calidad en la atención recibida" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmu-KU-IfE">
@@ -1701,7 +1719,7 @@
                                         <rect key="frame" x="0.0" y="862" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tGz-rh-mA1" id="Qng-hh-Ik2">
-                                            <frame key="frameInset" width="375" height="84"/>
+                                            <frame key="frameInset" width="375" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3.4 Calidad e importancia de los temas tratados" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pny-eM-fyK">
@@ -1778,7 +1796,7 @@
                                         <rect key="frame" x="0.0" y="947" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nFK-pA-cSA" id="7Wk-FL-VY0">
-                                            <frame key="frameInset" width="375" height="59"/>
+                                            <frame key="frameInset" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4. Consigne brevemente" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EB6-UP-AkE">
@@ -1795,7 +1813,7 @@
                                         <rect key="frame" x="0.0" y="1007" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a9Z-GD-8Ek" id="VuR-ON-f19">
-                                            <frame key="frameInset" width="375" height="79"/>
+                                            <frame key="frameInset" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4.1 Aspectos Positivos" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTA-L3-ntA">
@@ -1819,7 +1837,7 @@
                                         <rect key="frame" x="0.0" y="1087" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ldn-i8-LhQ" id="fjg-AY-gqe">
-                                            <frame key="frameInset" width="375" height="79"/>
+                                            <frame key="frameInset" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4.2 Aspectos Negativos" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9j-wQ-L08">
@@ -1843,7 +1861,7 @@
                                         <rect key="frame" x="0.0" y="1167" width="375" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QMR-5I-XlH" id="hyf-pc-Lfq">
-                                            <frame key="frameInset" width="375" height="124"/>
+                                            <frame key="frameInset" width="375" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4.3.¿Que sugerencias haría para el cuarto encuentro y que temas le gustaría que se abordaran en futuras reuniones?" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDY-AM-bM0">
@@ -1872,7 +1890,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Encuesta de Conformidad" id="XLL-qK-aeL">
-                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="YWF-R8-RrD"/>
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="YWF-R8-RrD">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="YWF-R8-RrD" id="2uw-XN-qgQ"/>
@@ -1880,7 +1900,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Wo-1O-FRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396" y="3724.5877061469268"/>
+            <point key="canvasLocation" x="1396" y="3725"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="00X-o8-MC0">
@@ -1904,6 +1924,7 @@
     <resources>
         <image name="Mapa-Evento.jpeg" width="1078" height="822"/>
         <image name="address-book.png" width="32" height="32"/>
+        <image name="background.jpg" width="560" height="281"/>
         <image name="book.png" width="32" height="32"/>
         <image name="checkmark.png" width="32" height="32"/>
         <image name="compass2.png" width="32" height="32"/>
