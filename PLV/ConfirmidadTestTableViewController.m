@@ -13,6 +13,9 @@
 
 @end
 
+UIImage *imageYes;
+UIImage *imageNo;
+
 @implementation ConfirmidadTestTableViewController
 
 - (void)viewDidLoad {
@@ -24,8 +27,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    //MenuButton
+    //Var ini
     
+    imageNo = [UIImage imageNamed:@"radio-off.png"];
+    imageYes = [UIImage imageNamed:@"radio-on.png"];
+    
+    //MenuButton
     _menuButton.target = self.revealViewController;
     _menuButton.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
@@ -102,4 +109,84 @@
 }
 */
 
+- (IBAction)changeSelected_question1:(id)sender {
+    
+    UIButton *button = (UIButton *)sender;
+    if (button.tag == 1) {
+        //select YES
+        [_radio_1_no setImage:imageNo forState:UIControlStateNormal];
+        [_radio_1_si setImage:imageYes forState:UIControlStateNormal];
+    }else
+    {
+        [_radio_1_no setImage:imageYes forState:UIControlStateNormal];
+        [_radio_1_si setImage:imageNo forState:UIControlStateNormal];
+    }
+}
+- (IBAction)changeSelected_question2:(id)sender {
+    
+    
+}
+- (IBAction)changeSelected_question31:(id)sender {
+    UIButton *buttonSelected = (UIButton *)sender;
+    switch (buttonSelected.tag) {
+        case 1:
+        {
+            [_radio_1 setImage:imageYes forState:UIControlStateNormal];
+            [_radio_2 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_3 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_4 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_5 setImage:imageNo forState:UIControlStateNormal];
+        }
+            break;
+        case 2:
+        {
+            [_radio_1 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_2 setImage:imageYes forState:UIControlStateNormal];
+            [_radio_3 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_4 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_5 setImage:imageNo forState:UIControlStateNormal];
+        }
+            break;
+        case 3:
+        {
+            [_radio_1 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_2 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_3 setImage:imageYes forState:UIControlStateNormal];
+            [_radio_4 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_5 setImage:imageNo forState:UIControlStateNormal];
+        }
+            break;
+        case 4:
+        {
+            [_radio_1 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_2 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_3 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_4 setImage:imageYes forState:UIControlStateNormal];
+            [_radio_5 setImage:imageNo forState:UIControlStateNormal];
+        }
+            break;
+        case 5:
+        {
+            [_radio_1 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_2 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_3 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_4 setImage:imageNo forState:UIControlStateNormal];
+            [_radio_5 setImage:imageYes forState:UIControlStateNormal];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+- (IBAction)changeSelected_question32:(id)sender {
+    
+}
+- (IBAction)changeSelected_question33:(id)sender {
+    
+}
+- (IBAction)changeSelected_question34:(id)sender {
+    
+}
 @end
