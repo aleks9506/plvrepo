@@ -44,8 +44,21 @@
 		C0A9D13C1D9569C70015B432 /* users.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A9D1311D9569C70015B432 /* users.png */; };
 		C0A9D1411D957FC80015B432 /* loop2.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A9D1401D957FC80015B432 /* loop2.png */; };
 		C0A9D1441D9586CF0015B432 /* TourismTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D1431D9586CF0015B432 /* TourismTableViewController.m */; };
+		C0B526921DA0648000C52135 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B526911DA0648000C52135 /* Reachability.m */; };
+		C0B526961DA08BA300C52135 /* PostCellWithoutImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B526951DA08BA300C52135 /* PostCellWithoutImageTableViewCell.m */; };
 		C0FE98791D96E3FA00E7FD5A /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C0FE98781D96E3FA00E7FD5A /* logo.jpeg */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		C0B526931DA0666500C52135 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		C0A9D1021D9564210015B432 /* PBXContainerItemProxy */ = {
@@ -121,6 +134,10 @@
 		C0A9D1401D957FC80015B432 /* loop2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loop2.png; sourceTree = "<group>"; };
 		C0A9D1421D9586CF0015B432 /* TourismTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourismTableViewController.h; sourceTree = "<group>"; };
 		C0A9D1431D9586CF0015B432 /* TourismTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourismTableViewController.m; sourceTree = "<group>"; };
+		C0B526901DA0648000C52135 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C0B526911DA0648000C52135 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C0B526941DA08BA300C52135 /* PostCellWithoutImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostCellWithoutImageTableViewCell.h; path = CellsTypes/PostCellWithoutImageTableViewCell.h; sourceTree = "<group>"; };
+		C0B526951DA08BA300C52135 /* PostCellWithoutImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostCellWithoutImageTableViewCell.m; path = CellsTypes/PostCellWithoutImageTableViewCell.m; sourceTree = "<group>"; };
 		C0FE98781D96E3FA00E7FD5A /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +173,8 @@
 				C078F4981D9B421400EFA704 /* ActivityTableViewCell.m */,
 				07DC4AAF1DA022D100795649 /* postTableViewCell.h */,
 				07DC4AB01DA022D100795649 /* postTableViewCell.m */,
+				C0B526941DA08BA300C52135 /* PostCellWithoutImageTableViewCell.h */,
+				C0B526951DA08BA300C52135 /* PostCellWithoutImageTableViewCell.m */,
 			);
 			name = CellsTypes;
 			sourceTree = "<group>";
@@ -183,6 +202,7 @@
 		C0A9D0E71D9564210015B432 /* PLV */ = {
 			isa = PBXGroup;
 			children = (
+				C0B5268F1DA0645C00C52135 /* Reachability */,
 				C078F4961D9B41BD00EFA704 /* CellsTypes */,
 				C0A9D11F1D9564CA0015B432 /* SWRevealController */,
 				C0A9D11E1D9564500015B432 /* Assets */,
@@ -276,6 +296,15 @@
 			name = SWRevealController;
 			sourceTree = "<group>";
 		};
+		C0B5268F1DA0645C00C52135 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				C0B526901DA0648000C52135 /* Reachability.h */,
+				C0B526911DA0648000C52135 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,6 +317,7 @@
 				C0A9D0E31D9564210015B432 /* Resources */,
 			);
 			buildRules = (
+				C0B526931DA0666500C52135 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -433,6 +463,7 @@
 				C0A9D0ED1D9564210015B432 /* AppDelegate.m in Sources */,
 				07DC4AB11DA022D100795649 /* postTableViewCell.m in Sources */,
 				07DC4AB41DA023F300795649 /* PLVWallViewController.m in Sources */,
+				C0B526921DA0648000C52135 /* Reachability.m in Sources */,
 				0708F54C1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m in Sources */,
 				C078F4951D9B307600EFA704 /* SpeakersTableViewController.m in Sources */,
 				C078F4991D9B421400EFA704 /* ActivityTableViewCell.m in Sources */,
@@ -442,6 +473,7 @@
 				C0A9D1221D9564DE0015B432 /* SWRevealViewController.m in Sources */,
 				C0A9D0F61D9564210015B432 /* PLV.xcdatamodeld in Sources */,
 				C0A9D1441D9586CF0015B432 /* TourismTableViewController.m in Sources */,
+				C0B526961DA08BA300C52135 /* PostCellWithoutImageTableViewCell.m in Sources */,
 				C0A9D0EA1D9564210015B432 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

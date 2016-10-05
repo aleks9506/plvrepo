@@ -9,9 +9,19 @@
 #import "ForoTestTableViewController.h"
 #import "SWRevealViewController.h"
 
-@interface ForoTestTableViewController ()
+@interface ForoTestTableViewController ()<UIGestureRecognizerDelegate>
 
 @end
+
+//Images to Radio
+UIImage *imgYes;
+UIImage *imgNo;
+
+//variables
+NSString *aswers1;
+NSString *aswers2;
+NSString *aswers3;
+NSString *aswers4;
 
 @implementation ForoTestTableViewController
 
@@ -24,10 +34,20 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    //Var ini
+    
+    imgNo = [UIImage imageNamed:@"radio-off.png"];
+    imgYes= [UIImage imageNamed:@"radio-on.png"];
+    
     //Boton Menu
     _menuButton.target =self.revealViewController;
     _menuButton.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    //Ocultar el teclado cuando el table view es presionado
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ocultarTeclado:)];
+    gesture.delegate = self;
+    [self.tableView addGestureRecognizer:gesture];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -101,4 +121,186 @@
 }
 */
 
+- (IBAction)selectedRadio_1:(id)sender {
+    UIButton *buttonSelected = (UIButton *)sender;
+    switch (buttonSelected.tag) {
+        case 1:
+        {
+            [_radio_1_1 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_1_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_1_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_1_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 2:
+        {
+            [_radio_1_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_1_2 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_1_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_1_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 3:
+        {
+            [_radio_1_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_1_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_1_3 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_1_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 4:
+        {
+            [_radio_1_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_1_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_1_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_1_4 setImage:imgYes forState:UIControlStateNormal];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    aswers1 = [NSString stringWithFormat:@"%ld",(long) buttonSelected.tag];
+    
+}
+- (IBAction)selectedRadio2:(id)sender {
+    UIButton *buttonSelected = (UIButton *)sender;
+    switch (buttonSelected.tag) {
+        case 1:
+        {
+            [_radio_2_1 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_2_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_2_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_2_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 2:
+        {
+            [_radio_2_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_2_2 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_2_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_2_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 3:
+        {
+            [_radio_2_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_2_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_2_3 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_2_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 4:
+        {
+            [_radio_2_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_2_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_2_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_2_4 setImage:imgYes forState:UIControlStateNormal];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    aswers2 = [NSString stringWithFormat:@"%ld",(long) buttonSelected.tag];
+    
+}
+- (IBAction)selectedRadio3:(id)sender {
+    UIButton *buttonSelected = (UIButton *)sender;
+    switch (buttonSelected.tag) {
+        case 1:
+        {
+            [_radio_3_1 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_3_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_3_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_3_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 2:
+        {
+            [_radio_3_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_3_2 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_3_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_3_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 3:
+        {
+            [_radio_3_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_3_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_3_3 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_3_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 4:
+        {
+            [_radio_3_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_3_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_3_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_3_4 setImage:imgYes forState:UIControlStateNormal];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    aswers3 = [NSString stringWithFormat:@"%ld",(long) buttonSelected.tag];
+    
+}
+- (IBAction)selectedRadio4:(id)sender {
+    UIButton *buttonSelected = (UIButton *)sender;
+    switch (buttonSelected.tag) {
+        case 1:
+        {
+            [_radio_4_1 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_4_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_4_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_4_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 2:
+        {
+            [_radio_4_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_4_2 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_4_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_4_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 3:
+        {
+            [_radio_4_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_4_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_4_3 setImage:imgYes forState:UIControlStateNormal];
+            [_radio_4_4 setImage:imgNo forState:UIControlStateNormal];
+        }
+            break;
+        case 4:
+        {
+            [_radio_4_1 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_4_2 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_4_3 setImage:imgNo forState:UIControlStateNormal];
+            [_radio_4_4 setImage:imgYes forState:UIControlStateNormal];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    aswers4 = [NSString stringWithFormat:@"%ld",(long) buttonSelected.tag];
+    
+}
+
+-(void) ocultarTeclado:(UIGestureRecognizer *)sender
+{
+    [self.view endEditing:YES];
+}
+
+- (IBAction)sendAswers:(id)sender {
+    
+    NSLog(@"respuesta1:%@",aswers1);
+    NSLog(@"respuesta2:%@",aswers2);
+    NSLog(@"respuesta3:%@",aswers3);
+    NSLog(@"respuesta4:%@",aswers4);
+}
 @end

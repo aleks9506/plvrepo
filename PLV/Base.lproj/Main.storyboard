@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -163,7 +163,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="237" id="XCZ-2W-n4a" customClass="postTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCellImage" rowHeight="237" id="XCZ-2W-n4a" customClass="postTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="237"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XCZ-2W-n4a" id="d81-Js-UAa">
@@ -196,6 +196,34 @@
                                             <outlet property="lbl_postContent" destination="7UD-Ki-uho" id="6tX-yE-Azt"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellWithoutImage" id="vdS-MV-mMY" customClass="PostCellWithoutImageTableViewCell">
+                                        <rect key="frame" x="0.0" y="265" width="375" height="237"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vdS-MV-mMY" id="Wdr-po-dOx">
+                                            <frame key="frameInset" width="375" height="236"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carlos Gilberto Burgueño Garcia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZL-el-h7Z">
+                                                    <frame key="frameInset" minX="8" minY="8" width="247" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ms-HU-IMB">
+                                                    <frame key="frameInset" minX="8" minY="37" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbl_postContent" destination="4Ms-HU-IMB" id="yqE-GJ-d1Z"/>
+                                            <outlet property="lbl_username" destination="4ZL-el-h7Z" id="Web-F7-iUx"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -203,7 +231,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Linea del Tiempo" id="Q5l-18-KVM">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="KXN-XE-uVZ">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -218,14 +246,14 @@
         <scene sceneID="4AA-aF-Yc2">
             <objects>
                 <tableViewController id="cHJ-6l-GQF" customClass="TourismTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qKS-AQ-Mei">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qKS-AQ-Mei">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="Uua-Q3-9Ov">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="H6R-oi-suV" detailTextLabel="GiS-5n-hu1" style="IBUITableViewCellStyleValue1" id="3bo-LS-oc3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="H6R-oi-suV" style="IBUITableViewCellStyleDefault" id="3bo-LS-oc3">
                                         <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3bo-LS-oc3" id="d38-NA-ANM">
@@ -233,14 +261,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="AVIANCA, línea aérea oficial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H6R-oi-suV">
-                                                    <frame key="frameInset" minX="15" minY="11" width="212" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="PDF" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GiS-5n-hu1">
-                                                    <frame key="frameInset" minX="328" minY="11" width="32" height="21"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -249,7 +270,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ObW-x3-eeb" detailTextLabel="CXP-H9-NN4" style="IBUITableViewCellStyleValue1" id="6Oc-XF-M2w">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ObW-x3-eeb" style="IBUITableViewCellStyleDefault" id="6Oc-XF-M2w">
                                         <rect key="frame" x="0.0" y="108" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Oc-XF-M2w" id="7Mp-8M-CCx">
@@ -257,14 +278,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Donde Hospedarse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ObW-x3-eeb">
-                                                    <frame key="frameInset" minX="15" minY="11" width="148" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="PDF" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CXP-H9-NN4">
-                                                    <frame key="frameInset" minX="328" minY="11" width="32" height="21"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -273,7 +287,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="dfP-Hf-THb" detailTextLabel="yr1-4A-uwg" style="IBUITableViewCellStyleValue1" id="TDp-EI-sqH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="dfP-Hf-THb" style="IBUITableViewCellStyleDefault" id="TDp-EI-sqH">
                                         <rect key="frame" x="0.0" y="152" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TDp-EI-sqH" id="j0g-ne-QoA">
@@ -281,14 +295,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Disfrata Ecuador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dfP-Hf-THb">
-                                                    <frame key="frameInset" minX="15" minY="11" width="128" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="PDF" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yr1-4A-uwg">
-                                                    <frame key="frameInset" minX="328" minY="11" width="32" height="21"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -297,7 +304,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Hqm-vL-HVk" detailTextLabel="VZS-An-Aj2" style="IBUITableViewCellStyleValue1" id="CsQ-5e-Lk3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Hqm-vL-HVk" style="IBUITableViewCellStyleDefault" id="CsQ-5e-Lk3">
                                         <rect key="frame" x="0.0" y="196" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CsQ-5e-Lk3" id="2oO-sq-a85">
@@ -305,14 +312,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Las mejores atracciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hqm-vL-HVk">
-                                                    <frame key="frameInset" minX="15" minY="11" width="186" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="VER MÁS" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VZS-An-Aj2">
-                                                    <frame key="frameInset" minX="288" minY="11" width="72" height="21"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -341,6 +341,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQU-h0-zoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1396" y="1550"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vIt-bc-5iP">
+            <objects>
+                <viewController id="s98-B7-3sQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h49-19-zOE"/>
+                        <viewControllerLayoutGuide type="bottom" id="LYk-gD-VBp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UCx-Jd-7gk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UxA-iR-A7y">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kml-cE-swN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="1530.5847076461771"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="V97-6k-RmJ">
@@ -419,6 +444,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="NBm-b6-NOD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="iqj-cK-gcn"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="tri-nK-fwn">
                                         <rect key="frame" x="0.0" y="280" width="375" height="60"/>
@@ -969,7 +997,7 @@
         <scene sceneID="sBt-v1-kfv">
             <objects>
                 <tableViewController id="ccc-8u-z24" customClass="ForoTestTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qfl-1H-ZgM">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="qfl-1H-ZgM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1035,25 +1063,37 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MN9-KR-OAC">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MN9-KR-OAC">
                                                     <frame key="frameInset" minX="8" minY="37" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio_1:" destination="ccc-8u-z24" eventType="touchUpInside" id="PAt-DX-kxT"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzg-Gb-5N3">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzg-Gb-5N3">
                                                     <frame key="frameInset" minX="9" minY="57" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio_1:" destination="ccc-8u-z24" eventType="touchUpInside" id="0dW-Df-ign"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azf-70-VpN">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azf-70-VpN">
                                                     <frame key="frameInset" minX="9" minY="78" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio_1:" destination="ccc-8u-z24" eventType="touchUpInside" id="aNL-3E-cYW"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpK-6O-38H">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpK-6O-38H">
                                                     <frame key="frameInset" minX="9" minY="101" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio_1:" destination="ccc-8u-z24" eventType="touchUpInside" id="lcv-75-MXA"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1100,25 +1140,37 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMA-nA-sxX">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMA-nA-sxX">
                                                     <frame key="frameInset" minX="8" minY="44" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio2:" destination="ccc-8u-z24" eventType="touchUpInside" id="WMO-Ue-fcg"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Saz-48-EwJ">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Saz-48-EwJ">
                                                     <frame key="frameInset" minX="9" minY="64" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio2:" destination="ccc-8u-z24" eventType="touchUpInside" id="F2A-IG-0cD"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So4-8W-kK6">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So4-8W-kK6">
                                                     <frame key="frameInset" minX="9" minY="85" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio2:" destination="ccc-8u-z24" eventType="touchUpInside" id="ofB-5o-dw9"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHD-sF-vVl">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHD-sF-vVl">
                                                     <frame key="frameInset" minX="9" minY="108" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio2:" destination="ccc-8u-z24" eventType="touchUpInside" id="RCc-oN-xV2"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1165,25 +1217,37 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Uh-pG-wxd">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Uh-pG-wxd">
                                                     <frame key="frameInset" minX="8" minY="37" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio3:" destination="ccc-8u-z24" eventType="touchUpInside" id="AiW-Mu-5wt"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NH3-ru-5Dw">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NH3-ru-5Dw">
                                                     <frame key="frameInset" minX="9" minY="57" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio3:" destination="ccc-8u-z24" eventType="touchUpInside" id="43M-ot-Q3T"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5Y-YP-8mR">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5Y-YP-8mR">
                                                     <frame key="frameInset" minX="9" minY="78" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio3:" destination="ccc-8u-z24" eventType="touchUpInside" id="18q-m9-AtS"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yv1-Hm-mWE">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yv1-Hm-mWE">
                                                     <frame key="frameInset" minX="9" minY="101" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio3:" destination="ccc-8u-z24" eventType="touchUpInside" id="FJR-n0-1f0"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1230,25 +1294,37 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40H-QE-OaP">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40H-QE-OaP">
                                                     <frame key="frameInset" minX="8" minY="37" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio4:" destination="ccc-8u-z24" eventType="touchUpInside" id="T4s-wy-GlH"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2I-db-RM4">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2I-db-RM4">
                                                     <frame key="frameInset" minX="9" minY="57" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio4:" destination="ccc-8u-z24" eventType="touchUpInside" id="7rM-yL-o0d"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhX-9g-qgQ">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhX-9g-qgQ">
                                                     <frame key="frameInset" minX="9" minY="78" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio4:" destination="ccc-8u-z24" eventType="touchUpInside" id="AAt-gO-Luz"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yb-w1-4at">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yb-w1-4at">
                                                     <frame key="frameInset" minX="9" minY="101" width="25" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
+                                                    <connections>
+                                                        <action selector="selectedRadio4:" destination="ccc-8u-z24" eventType="touchUpInside" id="eeq-9f-edd"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1361,9 +1437,35 @@
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="329-ZR-Mvl">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="checkmark.png" id="9Ma-KN-cbb">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="sendAswers:" destination="ccc-8u-z24" id="NfK-rI-mAu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="329-ZR-Mvl" id="a1k-wZ-bp0"/>
+                        <outlet property="radio_1_1" destination="MN9-KR-OAC" id="PGs-nM-OkH"/>
+                        <outlet property="radio_1_2" destination="yzg-Gb-5N3" id="YfV-k9-xYV"/>
+                        <outlet property="radio_1_3" destination="Azf-70-VpN" id="PQM-ZW-n0d"/>
+                        <outlet property="radio_1_4" destination="SpK-6O-38H" id="0up-BI-rm5"/>
+                        <outlet property="radio_2_1" destination="cMA-nA-sxX" id="2tU-HU-aJr"/>
+                        <outlet property="radio_2_2" destination="Saz-48-EwJ" id="rUK-0k-NGc"/>
+                        <outlet property="radio_2_3" destination="So4-8W-kK6" id="tfW-RJ-lyS"/>
+                        <outlet property="radio_2_4" destination="nHD-sF-vVl" id="8b5-Ob-pPk"/>
+                        <outlet property="radio_3_1" destination="2Uh-pG-wxd" id="hla-pw-puZ"/>
+                        <outlet property="radio_3_2" destination="NH3-ru-5Dw" id="xcf-P8-Qpc"/>
+                        <outlet property="radio_3_3" destination="l5Y-YP-8mR" id="3sc-SY-dSt"/>
+                        <outlet property="radio_3_4" destination="Yv1-Hm-mWE" id="Io6-HH-duE"/>
+                        <outlet property="radio_4_1" destination="40H-QE-OaP" id="i49-zJ-n4h"/>
+                        <outlet property="radio_4_2" destination="q2I-db-RM4" id="vPE-W5-2gO"/>
+                        <outlet property="radio_4_3" destination="HhX-9g-qgQ" id="80H-dp-skj"/>
+                        <outlet property="radio_4_4" destination="0yb-w1-4at" id="kV0-Rh-eRr"/>
+                        <outlet property="txt_pregunta5" destination="4El-aD-jI8" id="trB-dt-nNe"/>
+                        <outlet property="txt_pregunta6" destination="o2v-Uq-c5V" id="vGE-75-hzK"/>
+                        <outlet property="txt_pregunta7" destination="8vG-hI-oTW" id="1tC-SB-eFG"/>
+                        <outlet property="txt_pregunta8" destination="ppq-BN-EWL" id="wcL-D5-ND4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wU-Hu-ghz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1436,8 +1538,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
                                                     <connections>
-                                                        <action selector="changeSelected:" destination="SkQ-ZN-VCr" eventType="touchUpInside" id="Ahf-d4-pAW"/>
-                                                        <action selector="changeSelected_question1:" destination="SkQ-ZN-VCr" eventType="touchUpInside" id="9LZ-4I-xYx"/>
+                                                        <action selector="changeSelected_question1:" destination="SkQ-ZN-VCr" eventType="touchUpInside" id="RNn-WB-71R"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuX-OQ-KzD">
@@ -1445,8 +1546,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
                                                     <connections>
-                                                        <action selector="changeSelected:" destination="SkQ-ZN-VCr" eventType="touchUpInside" id="GXE-aq-ARO"/>
-                                                        <action selector="changeSelected_question1:" destination="SkQ-ZN-VCr" eventType="touchUpInside" id="NWP-I6-u1J"/>
+                                                        <action selector="changeSelected_question1:" destination="SkQ-ZN-VCr" eventType="touchUpInside" id="tnn-UH-qg1"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8d-6z-hIF">
@@ -1758,7 +1858,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2H-dw-vgh">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2H-dw-vgh">
                                                     <frame key="frameInset" minX="68" minY="46" width="24" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="radio-off.png"/>
@@ -2014,6 +2114,12 @@
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="YWF-R8-RrD">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="checkmark.png" id="R4n-dN-izx">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="SendAswer:" destination="SkQ-ZN-VCr" id="ha4-LE-0Bs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="YWF-R8-RrD" id="2uw-XN-qgQ"/>
@@ -2107,4 +2213,7 @@
         <image name="user.png" width="32" height="32"/>
         <image name="users.png" width="36" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="iqj-cK-gcn"/>
+    </inferredMetricsTieBreakers>
 </document>

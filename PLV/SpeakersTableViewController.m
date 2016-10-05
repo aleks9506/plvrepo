@@ -30,6 +30,8 @@ NSMutableArray *speakersArray;
     _menuButton.target = self.revealViewController;
     _menuButton.action =@selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    [self showActivityImage];
 }
 
 -(void)viewDidAppear:(BOOL)animated

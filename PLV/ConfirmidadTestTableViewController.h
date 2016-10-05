@@ -10,6 +10,7 @@
 
 @interface ConfirmidadTestTableViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
+- (IBAction)SendAswer:(id)sender;
 
 //Question 1
 - (IBAction)changeSelected_question1:(id)sender;
