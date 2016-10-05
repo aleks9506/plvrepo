@@ -8,6 +8,7 @@
 
 #import "TourismTableViewController.h"
 #import "SWRevealViewController.h"
+#import "showPDFViewController.h"
 
 @interface TourismTableViewController ()
 
@@ -100,5 +101,32 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    showPDFViewController *pdfController = [storyboard instantiateViewControllerWithIdentifier:@"webView"];
+    
+
+    
+    NSString *urlString = @"";
+        switch (indexPath.row) {
+            case 0:
+                urlString = @"htt://www.google.com";
+                break;
+            case 1:urlString = @"http://www.youtube.com";
+                break;
+            case 2:urlString = @"http://www.facebook.com";
+                break;
+            case 3:urlString = @"http://www.trippertravelguide.com/";
+                break;
+                
+            default:
+                break;
+        }
+    pdfController.UrlRequested = urlString;
+    [self.navigationController pushViewController:pdfController animated:YES];
+}
 
 @end

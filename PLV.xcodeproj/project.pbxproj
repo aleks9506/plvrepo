@@ -14,7 +14,11 @@
 		079C1CBA1D9EAAC20090B9AC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 079C1CB91D9EAAC20090B9AC /* background.jpg */; };
 		07DC4AB11DA022D100795649 /* postTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC4AB01DA022D100795649 /* postTableViewCell.m */; };
 		07DC4AB41DA023F300795649 /* PLVWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC4AB31DA023F300795649 /* PLVWallViewController.m */; };
-		C05FDB991D95E9270090054E /* ContacsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05FDB981D95E9270090054E /* ContacsTableViewController.m */; };
+		07ED1A7F1DA54C2600DF2CE7 /* showPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ED1A7E1DA54C2600DF2CE7 /* showPDFViewController.m */; };
+		07ED1A811DA5600200DF2CE7 /* Punto_verde.png in Resources */ = {isa = PBXBuildFile; fileRef = 07ED1A801DA5600200DF2CE7 /* Punto_verde.png */; };
+		07ED1A841DA565FA00DF2CE7 /* ContacsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ED1A831DA565FA00DF2CE7 /* ContacsViewController.m */; };
+		07ED1A871DA5661600DF2CE7 /* ContacTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ED1A861DA5661600DF2CE7 /* ContacTableViewCell.m */; };
+		07ED1A8B1DA59DD900DF2CE7 /* RestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ED1A8A1DA59DD900DF2CE7 /* RestAPI.m */; };
 		C05FDB9C1D9607850090054E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05FDB9B1D9607850090054E /* MapViewController.m */; };
 		C05FDB9E1D96087C0090054E /* Mapa-Evento.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */; };
 		C078F4951D9B307600EFA704 /* SpeakersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C078F4941D9B307600EFA704 /* SpeakersTableViewController.m */; };
@@ -89,8 +93,15 @@
 		07DC4AB01DA022D100795649 /* postTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = postTableViewCell.m; path = CellsTypes/postTableViewCell.m; sourceTree = "<group>"; };
 		07DC4AB21DA023F300795649 /* PLVWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLVWallViewController.h; sourceTree = "<group>"; };
 		07DC4AB31DA023F300795649 /* PLVWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLVWallViewController.m; sourceTree = "<group>"; };
-		C05FDB971D95E9270090054E /* ContacsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContacsTableViewController.h; sourceTree = "<group>"; };
-		C05FDB981D95E9270090054E /* ContacsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContacsTableViewController.m; sourceTree = "<group>"; };
+		07ED1A7D1DA54C2600DF2CE7 /* showPDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showPDFViewController.h; sourceTree = "<group>"; };
+		07ED1A7E1DA54C2600DF2CE7 /* showPDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showPDFViewController.m; sourceTree = "<group>"; };
+		07ED1A801DA5600200DF2CE7 /* Punto_verde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Punto_verde.png; sourceTree = "<group>"; };
+		07ED1A821DA565FA00DF2CE7 /* ContacsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContacsViewController.h; sourceTree = "<group>"; };
+		07ED1A831DA565FA00DF2CE7 /* ContacsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContacsViewController.m; sourceTree = "<group>"; };
+		07ED1A851DA5661600DF2CE7 /* ContacTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContacTableViewCell.h; sourceTree = "<group>"; };
+		07ED1A861DA5661600DF2CE7 /* ContacTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContacTableViewCell.m; sourceTree = "<group>"; };
+		07ED1A891DA59DD900DF2CE7 /* RestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestAPI.h; sourceTree = "<group>"; };
+		07ED1A8A1DA59DD900DF2CE7 /* RestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestAPI.m; sourceTree = "<group>"; };
 		C05FDB9A1D9607850090054E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		C05FDB9B1D9607850090054E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mapa-Evento.jpeg"; sourceTree = "<group>"; };
@@ -166,6 +177,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07ED1A881DA59DC300DF2CE7 /* RestAPI */ = {
+			isa = PBXGroup;
+			children = (
+				07ED1A891DA59DD900DF2CE7 /* RestAPI.h */,
+				07ED1A8A1DA59DD900DF2CE7 /* RestAPI.m */,
+			);
+			name = RestAPI;
+			sourceTree = "<group>";
+		};
 		C078F4961D9B41BD00EFA704 /* CellsTypes */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +195,8 @@
 				07DC4AB01DA022D100795649 /* postTableViewCell.m */,
 				C0B526941DA08BA300C52135 /* PostCellWithoutImageTableViewCell.h */,
 				C0B526951DA08BA300C52135 /* PostCellWithoutImageTableViewCell.m */,
+				07ED1A851DA5661600DF2CE7 /* ContacTableViewCell.h */,
+				07ED1A861DA5661600DF2CE7 /* ContacTableViewCell.m */,
 			);
 			name = CellsTypes;
 			sourceTree = "<group>";
@@ -202,6 +224,7 @@
 		C0A9D0E71D9564210015B432 /* PLV */ = {
 			isa = PBXGroup;
 			children = (
+				07ED1A881DA59DC300DF2CE7 /* RestAPI */,
 				C0B5268F1DA0645C00C52135 /* Reachability */,
 				C078F4961D9B41BD00EFA704 /* CellsTypes */,
 				C0A9D11F1D9564CA0015B432 /* SWRevealController */,
@@ -217,8 +240,6 @@
 				C0A9D13D1D9571560015B432 /* PLVWallTableViewController.h */,
 				C0A9D1421D9586CF0015B432 /* TourismTableViewController.h */,
 				C0A9D1431D9586CF0015B432 /* TourismTableViewController.m */,
-				C05FDB971D95E9270090054E /* ContacsTableViewController.h */,
-				C05FDB981D95E9270090054E /* ContacsTableViewController.m */,
 				C05FDB9A1D9607850090054E /* MapViewController.h */,
 				C05FDB9B1D9607850090054E /* MapViewController.m */,
 				C078F4931D9B307600EFA704 /* SpeakersTableViewController.h */,
@@ -231,6 +252,10 @@
 				0708F54B1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m */,
 				07DC4AB21DA023F300795649 /* PLVWallViewController.h */,
 				07DC4AB31DA023F300795649 /* PLVWallViewController.m */,
+				07ED1A7D1DA54C2600DF2CE7 /* showPDFViewController.h */,
+				07ED1A7E1DA54C2600DF2CE7 /* showPDFViewController.m */,
+				07ED1A821DA565FA00DF2CE7 /* ContacsViewController.h */,
+				07ED1A831DA565FA00DF2CE7 /* ContacsViewController.m */,
 			);
 			path = PLV;
 			sourceTree = "<group>";
@@ -264,6 +289,7 @@
 		C0A9D11E1D9564500015B432 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				07ED1A801DA5600200DF2CE7 /* Punto_verde.png */,
 				079C1CB91D9EAAC20090B9AC /* background.jpg */,
 				077D196A1D9D5A9F009879AD /* radio-off.png */,
 				077D196B1D9D5A9F009879AD /* radio-on.png */,
@@ -431,6 +457,7 @@
 				C0A9D0F31D9564210015B432 /* Main.storyboard in Resources */,
 				C0A9D1321D9569C70015B432 /* address-book.png in Resources */,
 				077D196C1D9D5A9F009879AD /* radio-off.png in Resources */,
+				07ED1A811DA5600200DF2CE7 /* Punto_verde.png in Resources */,
 				C0A9D1351D9569C70015B432 /* compass2.png in Resources */,
 				C0A9D1371D9569C70015B432 /* list.png in Resources */,
 				C0A9D13C1D9569C70015B432 /* users.png in Resources */,
@@ -459,10 +486,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C05FDB991D95E9270090054E /* ContacsTableViewController.m in Sources */,
 				C0A9D0ED1D9564210015B432 /* AppDelegate.m in Sources */,
 				07DC4AB11DA022D100795649 /* postTableViewCell.m in Sources */,
 				07DC4AB41DA023F300795649 /* PLVWallViewController.m in Sources */,
+				07ED1A7F1DA54C2600DF2CE7 /* showPDFViewController.m in Sources */,
 				C0B526921DA0648000C52135 /* Reachability.m in Sources */,
 				0708F54C1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m in Sources */,
 				C078F4951D9B307600EFA704 /* SpeakersTableViewController.m in Sources */,
@@ -470,10 +497,13 @@
 				0708F5481D9D628A005DAD01 /* ForoTestTableViewController.m in Sources */,
 				C05FDB9C1D9607850090054E /* MapViewController.m in Sources */,
 				C078F49C1D9B43A800EFA704 /* AgendaTableViewController.m in Sources */,
+				07ED1A871DA5661600DF2CE7 /* ContacTableViewCell.m in Sources */,
 				C0A9D1221D9564DE0015B432 /* SWRevealViewController.m in Sources */,
 				C0A9D0F61D9564210015B432 /* PLV.xcdatamodeld in Sources */,
 				C0A9D1441D9586CF0015B432 /* TourismTableViewController.m in Sources */,
+				07ED1A8B1DA59DD900DF2CE7 /* RestAPI.m in Sources */,
 				C0B526961DA08BA300C52135 /* PostCellWithoutImageTableViewCell.m in Sources */,
+				07ED1A841DA565FA00DF2CE7 /* ContacsViewController.m in Sources */,
 				C0A9D0EA1D9564210015B432 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = MQT89297R4;
 				INFOPLIST_FILE = PLV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -633,6 +664,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = MQT89297R4;
 				INFOPLIST_FILE = PLV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

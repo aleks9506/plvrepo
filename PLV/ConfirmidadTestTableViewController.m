@@ -380,11 +380,33 @@ NSString *aswer34;
     [self.view endEditing:YES];
 }
 - (IBAction)SendAswer:(id)sender {
-    NSLog(@"respuesta1:%@",aswer1);
-    NSLog(@"respuesta1:%@",aswer2);
-    NSLog(@"respuesta1:%@",aswer31);
-    NSLog(@"respuesta1:%@",aswer32);
-    NSLog(@"respuesta1:%@",aswer33);
-    NSLog(@"respuesta1:%@",aswer34);
+    
+    BOOL flag = YES;
+    
+    if (aswer1 == nil || aswer2 == nil || aswer31 == nil || aswer32 == nil || aswer33 == nil || aswer34 == nil || [_txt_question41.text  isEqual: @""] || [_txt_question_43 isEqual:@""]) {
+        flag =NO;
+    }
+    
+    if(flag){
+       //Enviar datos
+        NSLog(@"respuesta1:%@",aswer1);
+        NSLog(@"respuesta1:%@",aswer2);
+        NSLog(@"respuesta1:%@",aswer31);
+        NSLog(@"respuesta1:%@",aswer32);
+        NSLog(@"respuesta1:%@",aswer33);
+        NSLog(@"respuesta1:%@",aswer34);
+    }else{
+        UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"Error" message:@"Lo sentimos, seleccione el valor correspondiente" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* yesButton = [UIAlertAction
+                                    actionWithTitle:@"Aceptar"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action) {
+                                        //Handle your yes please button action here
+                                    }];
+        [alert addAction:yesButton];
+        
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+    }
 }
 @end
