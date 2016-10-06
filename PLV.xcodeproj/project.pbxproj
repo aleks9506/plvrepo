@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0708F5481D9D628A005DAD01 /* ForoTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0708F5471D9D628A005DAD01 /* ForoTestTableViewController.m */; };
 		0708F54C1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0708F54B1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m */; };
+		071763DF1DA6DBC900CE4535 /* SpeakersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071763DE1DA6DBC900CE4535 /* SpeakersViewController.m */; };
+		071763E21DA6EDD900CE4535 /* DetailSpeakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071763E11DA6EDD900CE4535 /* DetailSpeakerViewController.m */; };
 		077D196C1D9D5A9F009879AD /* radio-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D196A1D9D5A9F009879AD /* radio-off.png */; };
 		077D196D1D9D5A9F009879AD /* radio-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D196B1D9D5A9F009879AD /* radio-on.png */; };
 		079C1CBA1D9EAAC20090B9AC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 079C1CB91D9EAAC20090B9AC /* background.jpg */; };
@@ -18,10 +20,8 @@
 		07ED1A811DA5600200DF2CE7 /* Punto_verde.png in Resources */ = {isa = PBXBuildFile; fileRef = 07ED1A801DA5600200DF2CE7 /* Punto_verde.png */; };
 		07ED1A841DA565FA00DF2CE7 /* ContacsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ED1A831DA565FA00DF2CE7 /* ContacsViewController.m */; };
 		07ED1A871DA5661600DF2CE7 /* ContacTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ED1A861DA5661600DF2CE7 /* ContacTableViewCell.m */; };
-		07ED1A8B1DA59DD900DF2CE7 /* RestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ED1A8A1DA59DD900DF2CE7 /* RestAPI.m */; };
 		C05FDB9C1D9607850090054E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05FDB9B1D9607850090054E /* MapViewController.m */; };
 		C05FDB9E1D96087C0090054E /* Mapa-Evento.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */; };
-		C078F4951D9B307600EFA704 /* SpeakersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C078F4941D9B307600EFA704 /* SpeakersTableViewController.m */; };
 		C078F4991D9B421400EFA704 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C078F4981D9B421400EFA704 /* ActivityTableViewCell.m */; };
 		C078F49C1D9B43A800EFA704 /* AgendaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C078F49B1D9B43A800EFA704 /* AgendaTableViewController.m */; };
 		C0A9D0EA1D9564210015B432 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A9D0E91D9564210015B432 /* main.m */; };
@@ -86,6 +86,10 @@
 		0708F5471D9D628A005DAD01 /* ForoTestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForoTestTableViewController.m; sourceTree = "<group>"; };
 		0708F54A1D9D747F005DAD01 /* ConfirmidadTestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmidadTestTableViewController.h; sourceTree = "<group>"; };
 		0708F54B1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmidadTestTableViewController.m; sourceTree = "<group>"; };
+		071763DD1DA6DBC900CE4535 /* SpeakersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakersViewController.h; sourceTree = "<group>"; };
+		071763DE1DA6DBC900CE4535 /* SpeakersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakersViewController.m; sourceTree = "<group>"; };
+		071763E01DA6EDD900CE4535 /* DetailSpeakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailSpeakerViewController.h; sourceTree = "<group>"; };
+		071763E11DA6EDD900CE4535 /* DetailSpeakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailSpeakerViewController.m; sourceTree = "<group>"; };
 		077D196A1D9D5A9F009879AD /* radio-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-off.png"; sourceTree = "<group>"; };
 		077D196B1D9D5A9F009879AD /* radio-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-on.png"; sourceTree = "<group>"; };
 		079C1CB91D9EAAC20090B9AC /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
@@ -100,13 +104,9 @@
 		07ED1A831DA565FA00DF2CE7 /* ContacsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContacsViewController.m; sourceTree = "<group>"; };
 		07ED1A851DA5661600DF2CE7 /* ContacTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContacTableViewCell.h; sourceTree = "<group>"; };
 		07ED1A861DA5661600DF2CE7 /* ContacTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContacTableViewCell.m; sourceTree = "<group>"; };
-		07ED1A891DA59DD900DF2CE7 /* RestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestAPI.h; sourceTree = "<group>"; };
-		07ED1A8A1DA59DD900DF2CE7 /* RestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestAPI.m; sourceTree = "<group>"; };
 		C05FDB9A1D9607850090054E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		C05FDB9B1D9607850090054E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		C05FDB9D1D96087C0090054E /* Mapa-Evento.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mapa-Evento.jpeg"; sourceTree = "<group>"; };
-		C078F4931D9B307600EFA704 /* SpeakersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakersTableViewController.h; sourceTree = "<group>"; };
-		C078F4941D9B307600EFA704 /* SpeakersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakersTableViewController.m; sourceTree = "<group>"; };
 		C078F4971D9B421400EFA704 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActivityTableViewCell.h; path = CellsTypes/ActivityTableViewCell.h; sourceTree = "<group>"; };
 		C078F4981D9B421400EFA704 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActivityTableViewCell.m; path = CellsTypes/ActivityTableViewCell.m; sourceTree = "<group>"; };
 		C078F49A1D9B43A800EFA704 /* AgendaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgendaTableViewController.h; sourceTree = "<group>"; };
@@ -177,15 +177,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07ED1A881DA59DC300DF2CE7 /* RestAPI */ = {
-			isa = PBXGroup;
-			children = (
-				07ED1A891DA59DD900DF2CE7 /* RestAPI.h */,
-				07ED1A8A1DA59DD900DF2CE7 /* RestAPI.m */,
-			);
-			name = RestAPI;
-			sourceTree = "<group>";
-		};
 		C078F4961D9B41BD00EFA704 /* CellsTypes */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,7 +215,6 @@
 		C0A9D0E71D9564210015B432 /* PLV */ = {
 			isa = PBXGroup;
 			children = (
-				07ED1A881DA59DC300DF2CE7 /* RestAPI */,
 				C0B5268F1DA0645C00C52135 /* Reachability */,
 				C078F4961D9B41BD00EFA704 /* CellsTypes */,
 				C0A9D11F1D9564CA0015B432 /* SWRevealController */,
@@ -242,8 +232,6 @@
 				C0A9D1431D9586CF0015B432 /* TourismTableViewController.m */,
 				C05FDB9A1D9607850090054E /* MapViewController.h */,
 				C05FDB9B1D9607850090054E /* MapViewController.m */,
-				C078F4931D9B307600EFA704 /* SpeakersTableViewController.h */,
-				C078F4941D9B307600EFA704 /* SpeakersTableViewController.m */,
 				C078F49A1D9B43A800EFA704 /* AgendaTableViewController.h */,
 				C078F49B1D9B43A800EFA704 /* AgendaTableViewController.m */,
 				0708F5461D9D628A005DAD01 /* ForoTestTableViewController.h */,
@@ -256,6 +244,10 @@
 				07ED1A7E1DA54C2600DF2CE7 /* showPDFViewController.m */,
 				07ED1A821DA565FA00DF2CE7 /* ContacsViewController.h */,
 				07ED1A831DA565FA00DF2CE7 /* ContacsViewController.m */,
+				071763DD1DA6DBC900CE4535 /* SpeakersViewController.h */,
+				071763DE1DA6DBC900CE4535 /* SpeakersViewController.m */,
+				071763E01DA6EDD900CE4535 /* DetailSpeakerViewController.h */,
+				071763E11DA6EDD900CE4535 /* DetailSpeakerViewController.m */,
 			);
 			path = PLV;
 			sourceTree = "<group>";
@@ -492,16 +484,16 @@
 				07ED1A7F1DA54C2600DF2CE7 /* showPDFViewController.m in Sources */,
 				C0B526921DA0648000C52135 /* Reachability.m in Sources */,
 				0708F54C1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m in Sources */,
-				C078F4951D9B307600EFA704 /* SpeakersTableViewController.m in Sources */,
 				C078F4991D9B421400EFA704 /* ActivityTableViewCell.m in Sources */,
 				0708F5481D9D628A005DAD01 /* ForoTestTableViewController.m in Sources */,
 				C05FDB9C1D9607850090054E /* MapViewController.m in Sources */,
 				C078F49C1D9B43A800EFA704 /* AgendaTableViewController.m in Sources */,
+				071763E21DA6EDD900CE4535 /* DetailSpeakerViewController.m in Sources */,
 				07ED1A871DA5661600DF2CE7 /* ContacTableViewCell.m in Sources */,
+				071763DF1DA6DBC900CE4535 /* SpeakersViewController.m in Sources */,
 				C0A9D1221D9564DE0015B432 /* SWRevealViewController.m in Sources */,
 				C0A9D0F61D9564210015B432 /* PLV.xcdatamodeld in Sources */,
 				C0A9D1441D9586CF0015B432 /* TourismTableViewController.m in Sources */,
-				07ED1A8B1DA59DD900DF2CE7 /* RestAPI.m in Sources */,
 				C0B526961DA08BA300C52135 /* PostCellWithoutImageTableViewCell.m in Sources */,
 				07ED1A841DA565FA00DF2CE7 /* ContacsViewController.m in Sources */,
 				C0A9D0EA1D9564210015B432 /* main.m in Sources */,

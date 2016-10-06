@@ -1,24 +1,22 @@
 //
-//  ContacsViewController.m
+//  SpeakersViewController.m
 //  PLV
 //
-//  Created by Carlos Burgueño on 05/10/16.
+//  Created by Carlos Burgueño on 06/10/16.
 //  Copyright © 2016 Carlos Burgueño. All rights reserved.
 //
 
-#import "ContacsViewController.h"
+#import "SpeakersViewController.h"
 #import "SWRevealViewController.h"
-#import "ContacTableViewCell.h"
+#import "DetailSpeakerViewController.h"
 
-@interface ContacsViewController ()<UISearchBarDelegate,UIGestureRecognizerDelegate>
-
+@interface SpeakersViewController ()<UISearchBarDelegate,UIGestureRecognizerDelegate,UITableViewDelegate>
 
 @end
 
-NSMutableArray *jsonArray;
+NSMutableArray *speakersArray;
 
-@implementation ContacsViewController
-
+@implementation SpeakersViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,20 +26,12 @@ NSMutableArray *jsonArray;
     _menuButton.target = self.revealViewController;
     _menuButton.action = @selector(revealToggle:);
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    [self showActivityImage];
     
     //hide keyboard ontouch
-    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ocultarTeclado:)];
+    /*UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(ocultarTeclado:)];
     gesture.delegate = self;
-    [_tableView addGestureRecognizer:gesture];
-    
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [self getDataRequest];
-    [self.tableView reloadData];
-    [[self.view viewWithTag:12] stopAnimating];
+    [_tableView addGestureRecognizer:gesture];*/
+    _tableView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,8 +39,24 @@ NSMutableArray *jsonArray;
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Customs Methods
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self geDataFromUri];
+    [self.tableView reloadData];
+    [[self.view viewWithTag:12] stopAnimating];
+}
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+#pragma mark - custom
 -(void)showActivityImage{
     
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -60,20 +66,18 @@ NSMutableArray *jsonArray;
     [spinner startAnimating];
 }
 
--(void)getDataRequest{
-    
+-(void)geDataFromUri{
     NSError *error;
-    NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/asistentes"];
+    NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/speakers"];
     NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
-    jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    
+    speakersArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 }
 
--(void)geDataFromUri:(NSString *)textSearch followers:(NSString *)followers follow:(NSString *)follow{
+-(void)searchSpeaker:(NSString *)textSearch{
     
-    NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/asistentes"];
-    NSString *post = [NSString stringWithFormat:@"me_siguen=%@&id_parent=%@&los_sigo=%@&search=%@",followers,@"785",follow,textSearch];
-    NSLog(@"%@",post);
+    NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/speakers"];
+    NSString *post = [NSString stringWithFormat:@"postValues"];
+
     
     NSData *postData =[post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
@@ -92,7 +96,7 @@ NSMutableArray *jsonArray;
                                                          NSError *erorr;
                                                          // parse returned data
                                                          //NSString *result = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-                                                         jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&erorr];
+                                                         speakersArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&erorr];
                                                          
                                                          [_tableView reloadData];
                                                      } );
@@ -120,7 +124,7 @@ NSMutableArray *jsonArray;
     return session;
 }
 
-#pragma mark - Table view data source and Delegates
+#pragma mark - Table view data source and delegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
@@ -129,64 +133,53 @@ NSMutableArray *jsonArray;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [jsonArray count];
+    return [speakersArray count];
 }
 
 
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- ContacTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContacCell" forIndexPath:indexPath];
-     
-     if ([jsonArray count] > 0) {
-         NSDictionary *obj = [jsonArray objectAtIndex:indexPath.row];
-         NSString *str = [NSString stringWithFormat: @"%@ %@", [obj objectForKey:@"nombres"], [obj objectForKey:@"apellidos"]];
-         cell.llbl_name.text = str;
-         cell.userImage.image=[UIImage imageNamed:@"user.png"];
-         
-         if ([[obj objectForKey:@"asistencia"] isEqual:@"1"]) {
-             cell.confirmImage.image = [UIImage imageNamed:@"Punto_verde.png"];
-         }
-     }else
-     {
-         cell.llbl_name.text = @"No Se encontraron resultados";
-     }
-     
-     // Configure the cell...
-     return cell;
- }
-
-
-- (IBAction)changeValueSwitch:(id)sender {
-    NSString *followers = @"";
-    NSString *follow = @"";
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SpeakerCell" forIndexPath:indexPath];
     
-    if (_sw_followers.isOn) followers=@"1";
-    if (_sw_follows.isOn) follow =@"1";
+    // Configure the cell...
+    if ([speakersArray count] > 0) {
+        NSDictionary *obj = [speakersArray objectAtIndex:indexPath.row];
+        NSString *str = [obj objectForKey:@"conferencista"];
+        cell.textLabel.text=str;
+        cell.imageView.image=[UIImage imageNamed:@"user.png"];
+    }
     
-    [self geDataFromUri:@"" followers:followers follow:follow];
+    return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    DetailSpeakerViewController *pdfController = [storyboard instantiateViewControllerWithIdentifier:@"DetailSpeakView"];
+    NSDictionary *obj = [speakersArray objectAtIndex:indexPath.row];
+    
+    pdfController.lbl_name.text = [obj objectForKey:@"conferencista"];
+    pdfController.lbl_city.text = [obj objectForKey:@"ciudad"];
+    pdfController.lbl_country.text = [obj objectForKey:@"pais"];
+    pdfController.lbl_eventName.text = [obj objectForKey:@"agenda"];
+    pdfController.lbl_eventDetail.text = [obj objectForKey:@"detalle"];
+    NSLog(@"entro");
+    
+    [self.navigationController pushViewController:pdfController animated:YES];
+}
+
 #pragma mark - SearchBar Methods
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    NSString *followers = @"";
-    NSString *follow = @"";
-    
-    if (_sw_followers.isOn) followers=@"1";
-    if (_sw_follows.isOn) follow =@"1";
     
     [searchBar resignFirstResponder];
-    [self geDataFromUri:_txt_search.text followers:followers follow:follow];
+    [self searchSpeaker:searchBar.text];
+    
 }
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     if ([searchText isEqualToString:@""]) {
-        NSString *followers = @"";
-        NSString *follow = @"";
-        
-        if (_sw_followers.isOn) followers=@"1";
-        if (_sw_follows.isOn) follow =@"1";
-        
         [searchBar resignFirstResponder];
-        [self geDataFromUri:searchText followers:followers follow:follow];
+        [self searchSpeaker:searchText];
     }
 }
 
