@@ -13,6 +13,7 @@
 		071763E21DA6EDD900CE4535 /* DetailSpeakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071763E11DA6EDD900CE4535 /* DetailSpeakerViewController.m */; };
 		077D196C1D9D5A9F009879AD /* radio-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D196A1D9D5A9F009879AD /* radio-off.png */; };
 		077D196D1D9D5A9F009879AD /* radio-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D196B1D9D5A9F009879AD /* radio-on.png */; };
+		078A1A971DA930D300E5C606 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078A1A961DA930D300E5C606 /* LoginViewController.m */; };
 		079C1CBA1D9EAAC20090B9AC /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 079C1CB91D9EAAC20090B9AC /* background.jpg */; };
 		07DC4AB11DA022D100795649 /* postTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC4AB01DA022D100795649 /* postTableViewCell.m */; };
 		07DC4AB41DA023F300795649 /* PLVWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DC4AB31DA023F300795649 /* PLVWallViewController.m */; };
@@ -92,6 +93,8 @@
 		071763E11DA6EDD900CE4535 /* DetailSpeakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailSpeakerViewController.m; sourceTree = "<group>"; };
 		077D196A1D9D5A9F009879AD /* radio-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-off.png"; sourceTree = "<group>"; };
 		077D196B1D9D5A9F009879AD /* radio-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-on.png"; sourceTree = "<group>"; };
+		078A1A951DA930D300E5C606 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		078A1A961DA930D300E5C606 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		079C1CB91D9EAAC20090B9AC /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		07DC4AAF1DA022D100795649 /* postTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = postTableViewCell.h; path = CellsTypes/postTableViewCell.h; sourceTree = "<group>"; };
 		07DC4AB01DA022D100795649 /* postTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = postTableViewCell.m; path = CellsTypes/postTableViewCell.m; sourceTree = "<group>"; };
@@ -248,6 +251,8 @@
 				071763DE1DA6DBC900CE4535 /* SpeakersViewController.m */,
 				071763E01DA6EDD900CE4535 /* DetailSpeakerViewController.h */,
 				071763E11DA6EDD900CE4535 /* DetailSpeakerViewController.m */,
+				078A1A951DA930D300E5C606 /* LoginViewController.h */,
+				078A1A961DA930D300E5C606 /* LoginViewController.m */,
 			);
 			path = PLV;
 			sourceTree = "<group>";
@@ -482,6 +487,7 @@
 				07DC4AB11DA022D100795649 /* postTableViewCell.m in Sources */,
 				07DC4AB41DA023F300795649 /* PLVWallViewController.m in Sources */,
 				07ED1A7F1DA54C2600DF2CE7 /* showPDFViewController.m in Sources */,
+				078A1A971DA930D300E5C606 /* LoginViewController.m in Sources */,
 				C0B526921DA0648000C52135 /* Reachability.m in Sources */,
 				0708F54C1D9D747F005DAD01 /* ConfirmidadTestTableViewController.m in Sources */,
 				C078F4991D9B421400EFA704 /* ActivityTableViewCell.m in Sources */,
