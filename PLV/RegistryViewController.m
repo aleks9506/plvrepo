@@ -1,18 +1,18 @@
 //
-//  DetailSpeakerViewController.m
+//  RegistryViewController.m
 //  PLV
 //
-//  Created by Carlos Burgueño on 06/10/16.
+//  Created by Carlos Burgueño on 10/10/16.
 //  Copyright © 2016 Carlos Burgueño. All rights reserved.
 //
 
-#import "DetailSpeakerViewController.h"
+#import "RegistryViewController.h"
 
-@interface DetailSpeakerViewController ()
+@interface RegistryViewController ()<UITextFieldDelegate,UIPickerViewDelegate,UIPickerViewDelegate>
 
 @end
 
-@implementation DetailSpeakerViewController
+@implementation RegistryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,4 +34,9 @@
 }
 */
 
+- (IBAction)SelectDocumentation:(id)sender {
+}
+
+- (IBAction)selectCountry:(id)sender {
+}
 @end

@@ -25,8 +25,8 @@
 */
 
 #import <QuartzCore/QuartzCore.h>
-
 #import "SWRevealViewController.h"
+
 
 
 #pragma mark - StatusBar Helper Function
@@ -759,6 +759,7 @@ const int FrontViewPositionNone = 0xff;
     // and resume it back to the previous state, it is possible to override this behaviour by
     // intercepting it on the panGestureBegan and panGestureEnded delegates
     _userInteractionStore = _contentView.userInteractionEnabled;
+
 }
 
 

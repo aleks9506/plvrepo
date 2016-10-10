@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+
 
 @interface PLVWallViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *menuButton;
+@property (weak,nonatomic ) NSString *idUser;
+
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
