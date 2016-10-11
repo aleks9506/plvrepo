@@ -7,13 +7,21 @@
 //
 
 #import "LoginViewController.h"
+#import <CoreData/CoreData.h>
+#import "AppDelegate.h"
+#import "Reachability.h"
 
-@interface LoginViewController ()
+@interface LoginViewController ()<UITextFieldDelegate>
 
 @end
 NSDictionary *UserData;
 
 @implementation LoginViewController
+
+- (NSPersistentContainer *)persistentContainer {
+    return ((AppDelegate *)[UIApplication sharedApplication].delegate).persistentContainer;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,9 +44,9 @@ NSDictionary *UserData;
 */
 
 - (IBAction)btn_Login:(id)sender {
-    if ([_txtMail isEqual:@""] && [_txt_password isEqual:@""]) {
-        //enviar mensaje
-        UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"Validacion" message:@"Favor Complete los campos necesarios" preferredStyle:UIAlertControllerStyleAlert];
+    
+    if ([_txtMail.text isEqualToString:@""] || [_txt_password.text isEqualToString:@""]) {
+        UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"Error" message:@"Favor de ingresar sus datos" preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* yesButton = [UIAlertAction
                                     actionWithTitle:@"Aceptar"
@@ -47,12 +55,32 @@ NSDictionary *UserData;
                                         //Handle your yes please button action here
                                     }];
         [alert addAction:yesButton];
-        
-        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+        [self presentViewController:alert animated:YES completion:nil];
     }else
     {
+        if ([[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable)
+        {
+            //connection unavailable
+            UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"Lo Sentimos" message:@"No Hay Conexion a Internet" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* yesButton = [UIAlertAction
+                                        actionWithTitle:@"Aceptar"
+                                        style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action) {
+                                            //Handle your yes please button action here
+                                        }];
+            [alert addAction:yesButton];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        else
+        {
+            //connection available
+            [self geDataFromUri:_txtMail.text pass:_txt_password.text];
+        }
         
     }
+    
+    
 }
 
 -(void)geDataFromUri:(NSString *)user pass:(NSString *)password{
@@ -77,9 +105,57 @@ NSDictionary *UserData;
                                                          NSError *erorr;
                                                          // parse returned data
                                                          UserData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&erorr];
-                                                         
-                                                         if ([UserData objectForKey:@"codigo"]) {
-                                                             //llamar metodo para guardar
+                                                         NSString *codigo = [UserData objectForKey:@"codigo"];
+                                                         switch ([codigo integerValue]) {
+                                                             case 200:
+                                                             {
+                                                                 /*NSDictionary *data = [NSJSONSerialization JSONObjectWithData:[UserData objectForKey:@"data"] options:kNilOptions error:&erorr];
+                                                                 NSManagedObjectContext *context = [self persistentContainer].viewContext;
+                                                                  // Create a new managed object
+                                                                  NSManagedObject *user = [NSEntityDescription insertNewObjectForEntityForName:@"UserEntity" inManagedObjectContext:context];
+                                                                  [user setValue:[data objectForKey:@"nombre"] forKey:@"name"];
+                                                                  [user setValue:[data objectForKey:@"apellidos"] forKey:@"lastname"];
+                                                                  [user setValue:[data objectForKey:@"id"] forKey:@"id"];
+                                                                  [user setValue:[data objectForKey:@"photo"] forKey:@"photo"];
+                                                                  
+                                                                  NSError *error = nil;
+                                                                  // Save the object to persistent store
+                                                                  if (![context save:&error]) {
+                                                                  NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+                                                                  }*/
+                                                                     [self dismissViewControllerAnimated:YES completion:nil];
+                                                             }
+                                                                 break;
+                                                             case 300:
+                                                             {
+                                                                 UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"Lo Sentimos" message:@"Los datos ingresados no son validos." preferredStyle:UIAlertControllerStyleAlert];
+                                                                 
+                                                                 UIAlertAction* yesButton = [UIAlertAction
+                                                                                             actionWithTitle:@"Aceptar"
+                                                                                             style:UIAlertActionStyleDefault
+                                                                                             handler:^(UIAlertAction * action) {
+                                                                                                 //Handle your yes please button action here
+                                                                                             }];
+                                                                 [alert addAction:yesButton];
+                                                                 
+                                                                 [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+                                                             }
+                                                                 break;
+                                                             default:
+                                                             {
+                                                                 UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"Lo Sentimos" message:@"Ha Ocurrido un Error" preferredStyle:UIAlertControllerStyleAlert];
+                                                                 
+                                                                 UIAlertAction* yesButton = [UIAlertAction
+                                                                                             actionWithTitle:@"Aceptar"
+                                                                                             style:UIAlertActionStyleDefault
+                                                                                             handler:^(UIAlertAction * action) {
+                                                                                                 //Handle your yes please button action here
+                                                                                             }];
+                                                                 [alert addAction:yesButton];
+                                                                 
+                                                                 [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+                                                             }
+                                                                 break;
                                                          }
                                                          
                                                      } );
@@ -100,6 +176,12 @@ NSDictionary *UserData;
                   } );
     
     return session;
+}
+
+//textfield Delegates
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
