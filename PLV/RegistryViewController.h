@@ -9,15 +9,23 @@
 #import <UIKit/UIKit.h>
 
 @interface RegistryViewController : UIViewController
-- (IBAction)SelectDocumentation:(id)sender;
-- (IBAction)selectCountry:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UITextField *txt_docType;
+
+@property (weak, nonatomic) IBOutlet UITextField *txt_country;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *txt_documentation;
 @property (weak, nonatomic) IBOutlet UITextField *txtname;
 @property (weak, nonatomic) IBOutlet UITextField *txtlastname;
 @property (weak, nonatomic) IBOutlet UITextField *txtMail;
 @property (weak, nonatomic) IBOutlet UITextField *txtpassword;
 @property (weak, nonatomic) IBOutlet UITextField *txtconfirmPass;
-@property (weak, nonatomic) IBOutlet UIPickerView *picker;
+
+//Actions
+- (IBAction)Cancel:(id)sender;
+- (IBAction)SendData:(id)sender;
+
+
 
 @end

@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 #import "Reachability.h"
 
-@interface LoginViewController ()<UITextFieldDelegate>
+@interface LoginViewController ()<UITextFieldDelegate,UIGestureRecognizerDelegate>
 
 @end
 NSDictionary *UserData;
@@ -26,6 +26,10 @@ NSDictionary *UserData;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)];
+    gesture.delegate = self;
+    [self.view addGestureRecognizer:gesture];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,6 +46,10 @@ NSDictionary *UserData;
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)hideKeyboard{
+    [self.view endEditing:YES];
+}
 
 - (IBAction)btn_Login:(id)sender {
     
@@ -109,20 +117,20 @@ NSDictionary *UserData;
                                                          switch ([codigo integerValue]) {
                                                              case 200:
                                                              {
-                                                                 /*NSDictionary *data = [NSJSONSerialization JSONObjectWithData:[UserData objectForKey:@"data"] options:kNilOptions error:&erorr];
+                                                                 NSDictionary *data = [UserData objectForKey:@"data"];
                                                                  NSManagedObjectContext *context = [self persistentContainer].viewContext;
                                                                   // Create a new managed object
                                                                   NSManagedObject *user = [NSEntityDescription insertNewObjectForEntityForName:@"UserEntity" inManagedObjectContext:context];
                                                                   [user setValue:[data objectForKey:@"nombre"] forKey:@"name"];
                                                                   [user setValue:[data objectForKey:@"apellidos"] forKey:@"lastname"];
-                                                                  [user setValue:[data objectForKey:@"id"] forKey:@"id"];
+                                                                  [user setValue:[data objectForKey:@"id"] forKey:@"idUser"];
                                                                   [user setValue:[data objectForKey:@"photo"] forKey:@"photo"];
                                                                   
                                                                   NSError *error = nil;
                                                                   // Save the object to persistent store
                                                                   if (![context save:&error]) {
                                                                   NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
-                                                                  }*/
+                                                                  }
                                                                      [self dismissViewControllerAnimated:YES completion:nil];
                                                              }
                                                                  break;

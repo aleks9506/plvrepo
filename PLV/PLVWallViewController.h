@@ -16,4 +16,11 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+@property (weak, nonatomic) IBOutlet UITextField *txt_postContent;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)sendPost:(id)sender;
+- (IBAction)selectImage:(id)sender;
+
+
 @end

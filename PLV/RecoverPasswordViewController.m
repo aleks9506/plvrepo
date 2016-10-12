@@ -129,7 +129,7 @@
 }
 
 -(void)sendPasswordChange:(NSString *)user password:(NSString *)pass{
-    NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/cambiarpass"];
+    NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/recuperarpass"];
     NSString *post = [NSString stringWithFormat:@"user=%@&pass=%@",user,pass];
     
     NSData *postData =[post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
