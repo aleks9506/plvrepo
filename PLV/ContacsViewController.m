@@ -9,6 +9,10 @@
 #import "ContacsViewController.h"
 #import "SWRevealViewController.h"
 #import "ContacTableViewCell.h"
+#import "Reachability.h"
+#import "AppDelegate.h"
+#import <CoreData/CoreData.h>
+
 
 @interface ContacsViewController ()<UISearchBarDelegate,UIGestureRecognizerDelegate>
 
@@ -16,9 +20,13 @@
 @end
 
 NSMutableArray *jsonArray;
+NSString *loginUserId;
 
 @implementation ContacsViewController
 
+- (NSPersistentContainer *)persistentContainer {
+    return ((AppDelegate *)[UIApplication sharedApplication].delegate).persistentContainer;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,6 +57,25 @@ NSMutableArray *jsonArray;
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    NSManagedObjectContext *context = [self persistentContainer].viewContext;
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc]init];
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"UserEntity" inManagedObjectContext:context];
+    [request setEntity:description];
+    
+    NSArray *arrayUser = [context executeFetchRequest:request error:nil];
+    
+    if ([arrayUser count]) {
+        NSManagedObject *userData = [arrayUser objectAtIndex:0];
+        loginUserId = [userData valueForKey:@"idUser"];
+    }
+    
+}
+
 #pragma mark - Customs Methods
 
 -(void)showActivityImage{
@@ -62,17 +89,34 @@ NSMutableArray *jsonArray;
 
 -(void)getDataRequest{
     
-    NSError *error;
-    NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/asistentes"];
-    NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
-    jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    
+    if ([[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable)
+    {
+        //connection unavailable
+        UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"Lo Sentimos" message:@"No Hay Conexion a Internet" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* yesButton = [UIAlertAction
+                                    actionWithTitle:@"Aceptar"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action) {
+                                        //Handle your yes please button action here
+                                    }];
+        [alert addAction:yesButton];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else
+    {
+        //connection available
+        NSError *error;
+        NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/asistentes"];
+        NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
+        jsonArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    }
 }
 
 -(void)geDataFromUri:(NSString *)textSearch followers:(NSString *)followers follow:(NSString *)follow{
     
     NSString *url_string = [NSString stringWithFormat: @"http://plv.procesos-iq.com/phrapi/api/asistentes"];
-    NSString *post = [NSString stringWithFormat:@"me_siguen=%@&id_parent=%@&los_sigo=%@&search=%@",followers,@"785",follow,textSearch];
+    NSString *post = [NSString stringWithFormat:@"me_siguen=%@&id_parent=%@&los_sigo=%@&search=%@",followers,loginUserId,follow,textSearch];
     NSLog(@"%@",post);
     
     NSData *postData =[post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
@@ -162,7 +206,25 @@ NSMutableArray *jsonArray;
     if (_sw_followers.isOn) followers=@"1";
     if (_sw_follows.isOn) follow =@"1";
     
-    [self geDataFromUri:@"" followers:followers follow:follow];
+    if ([[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable)
+    {
+        //connection unavailable
+        UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"Lo Sentimos" message:@"No Hay Conexion a Internet" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* yesButton = [UIAlertAction
+                                    actionWithTitle:@"Aceptar"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action) {
+                                        //Handle your yes please button action here
+                                    }];
+        [alert addAction:yesButton];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else
+    {
+        //connection available
+        [self geDataFromUri:@"" followers:followers follow:follow];
+    }
 }
 #pragma mark - SearchBar Methods
 
@@ -174,7 +236,26 @@ NSMutableArray *jsonArray;
     if (_sw_follows.isOn) follow =@"1";
     
     [searchBar resignFirstResponder];
-    [self geDataFromUri:_txt_search.text followers:followers follow:follow];
+    
+    if ([[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable)
+    {
+        //connection unavailable
+        UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"Lo Sentimos" message:@"No Hay Conexion a Internet" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* yesButton = [UIAlertAction
+                                    actionWithTitle:@"Aceptar"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action) {
+                                        //Handle your yes please button action here
+                                    }];
+        [alert addAction:yesButton];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    else
+    {
+        //connection available
+       [self geDataFromUri:_txt_search.text followers:followers follow:follow];
+    }
 }
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
@@ -186,7 +267,27 @@ NSMutableArray *jsonArray;
         if (_sw_follows.isOn) follow =@"1";
         
         [searchBar resignFirstResponder];
-        [self geDataFromUri:searchText followers:followers follow:follow];
+        
+        if ([[Reachability reachabilityForInternetConnection]currentReachabilityStatus]==NotReachable)
+        {
+            //connection unavailable
+            UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"Lo Sentimos" message:@"No Hay Conexion a Internet" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* yesButton = [UIAlertAction
+                                        actionWithTitle:@"Aceptar"
+                                        style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action) {
+                                            //Handle your yes please button action here
+                                        }];
+            [alert addAction:yesButton];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        else
+        {
+            //connection available
+            [self geDataFromUri:searchText followers:followers follow:follow];
+        }
+        
     }
 }
 

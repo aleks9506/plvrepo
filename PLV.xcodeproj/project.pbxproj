@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075FBD941DAE83DE00E33989 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 075FBD931DAE83DE00E33989 /* MenuViewController.m */; };
 		077D196C1D9D5A9F009879AD /* radio-off.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D196A1D9D5A9F009879AD /* radio-off.png */; };
 		077D196D1D9D5A9F009879AD /* radio-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 077D196B1D9D5A9F009879AD /* radio-on.png */; };
 		078A1A971DA930D300E5C606 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 078A1A961DA930D300E5C606 /* LoginViewController.m */; };
@@ -78,6 +79,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075FBD921DAE83DE00E33989 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		075FBD931DAE83DE00E33989 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		077D196A1D9D5A9F009879AD /* radio-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-off.png"; sourceTree = "<group>"; };
 		077D196B1D9D5A9F009879AD /* radio-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio-on.png"; sourceTree = "<group>"; };
 		078A1A951DA930D300E5C606 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -226,6 +229,8 @@
 				C0DCDF2E1DAB96000018C955 /* RecoverPasswordViewController.m */,
 				C0D4ABB51DAB9D1000E72EDC /* RegistryViewController.h */,
 				C0D4ABB61DAB9D1000E72EDC /* RegistryViewController.m */,
+				075FBD921DAE83DE00E33989 /* MenuViewController.h */,
+				075FBD931DAE83DE00E33989 /* MenuViewController.m */,
 			);
 			path = PLV;
 			sourceTree = "<group>";
@@ -459,6 +464,7 @@
 				C0D4ABB71DAB9D1000E72EDC /* RegistryViewController.m in Sources */,
 				C0A9D0ED1D9564210015B432 /* AppDelegate.m in Sources */,
 				07DC4AB11DA022D100795649 /* postTableViewCell.m in Sources */,
+				075FBD941DAE83DE00E33989 /* MenuViewController.m in Sources */,
 				07DC4AB41DA023F300795649 /* PLVWallViewController.m in Sources */,
 				078A1A971DA930D300E5C606 /* LoginViewController.m in Sources */,
 				C0B526921DA0648000C52135 /* Reachability.m in Sources */,

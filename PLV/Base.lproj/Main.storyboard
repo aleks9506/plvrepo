@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZ7-s5-X6p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2111" y="-2298"/>
+            <point key="canvasLocation" x="-2111" y="-2225"/>
         </scene>
         <!--Recover Password View Controller-->
         <scene sceneID="u3c-Wy-W1S">
@@ -206,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKS-Xz-ca7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1226.4000000000001" y="-2057.7211394302849"/>
+            <point key="canvasLocation" x="-1226" y="-1844"/>
         </scene>
         <!--Registry View Controller-->
         <scene sceneID="CUD-Tv-dIz">
@@ -391,7 +391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLK-aT-IYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1226.4000000000001" y="-2853.8230884557724"/>
+            <point key="canvasLocation" x="-1226" y="-2593"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -413,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2110" y="-1451"/>
+            <point key="canvasLocation" x="-2111" y="-911"/>
         </scene>
         <!--Linea del Tiempo-->
         <scene sceneID="NRY-WS-RyP">
@@ -492,7 +492,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="237"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XCZ-2W-n4a" id="d81-Js-UAa">
-                                            <frame key="frameInset" width="375" height="236"/>
+                                            <frame key="frameInset" width="375" height="237"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carlos Gilberto Burgueño Garcia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H56-aQ-pwD">
@@ -525,7 +525,7 @@
                                         <rect key="frame" x="0.0" y="265" width="375" height="151"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vdS-MV-mMY" id="Wdr-po-dOx">
-                                            <frame key="frameInset" width="375" height="150"/>
+                                            <frame key="frameInset" width="375" height="151"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Carlos Gilberto Burgueño Garcia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZL-el-h7Z">
@@ -571,12 +571,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9M-SL-obe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1485.5999999999999" y="-1451.4242878560722"/>
+            <point key="canvasLocation" x="42" y="-910"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="usb-7d-dnS">
             <objects>
-                <viewController id="PJE-ye-ffs" sceneMemberID="viewController">
+                <viewController id="PJE-ye-ffs" customClass="MenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IHm-oI-XAd"/>
                         <viewControllerLayoutGuide type="bottom" id="lzk-DV-lU9"/>
@@ -614,9 +614,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCZ-LS-hJB">
                                 <frame key="frameInset" minY="180" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="NBm-b6-NOD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="4tA-G1-qjd"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Muro PLV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFu-Oy-TCy">
                                 <frame key="frameInset" minX="56" minY="265" width="89" height="21"/>
@@ -680,14 +677,21 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqt-7K-K0E">
                                 <frame key="frameInset" minX="-3" minY="452" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="btn_logOut:" destination="PJE-ye-ffs" eventType="touchUpInside" id="Pyj-r1-U6V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="lblName" destination="P4W-OM-9df" id="NkI-tv-dRY"/>
+                        <outlet property="profilePhoto" destination="77k-oO-687" id="a3h-7b-2hu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWK-Un-Q58" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2111" y="-625"/>
+            <point key="canvasLocation" x="-2111" y="-190"/>
         </scene>
         <!--Contactos-->
         <scene sceneID="m1H-Ca-bR1">
@@ -724,7 +728,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5un-WE-w3r" id="lJA-QK-GiJ">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYA-mo-OL0">
@@ -796,7 +800,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zY0-7I-aQ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="60"/>
+            <point key="canvasLocation" x="41" y="-190"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HgH-cA-Jbd">
@@ -975,7 +979,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TI3-5z-JqD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457" y="-1451"/>
+            <point key="canvasLocation" x="-740" y="-910"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OzO-uB-AAx">
@@ -993,7 +997,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QdS-jI-k1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="404" y="60"/>
+            <point key="canvasLocation" x="-740" y="-190"/>
         </scene>
     </scenes>
     <resources>
@@ -1008,7 +1012,4 @@
         <image name="profile.png" width="32" height="32"/>
         <image name="user.png" width="32" height="32"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="4tA-G1-qjd"/>
-    </inferredMetricsTieBreakers>
 </document>
